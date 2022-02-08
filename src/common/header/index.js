@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import { connect } from 'react-redux'
 import { ImQuill } from "react-icons/im"
 import { GrFormSearch } from "react-icons/gr"
 import { RiFontSize } from "react-icons/ri"
@@ -14,56 +15,102 @@ import {
   SearchWrapper
 } from './style'
 
-class Header extends Component {
-    state = {
-        focused: false
-    }
-    handleInputFocus = () => {
-        this.setState({
-            focused: true
-        })
-    }
-    handleInputBlur = () => {
-        this.setState({
-            focused: false
-        })
-    }
+// stateless function component
+const Header = (props) => {
+    return (
+        <HeadeWrapper>
+        <Logo/>
+        <Nav>
+            <NavItem className='left active'>Home</NavItem>
+            <NavItem className='left'>Download</NavItem>
+            <NavItem className='right'>Login</NavItem>
+            <NavItem className='right'>
+                <RiFontSize/>
+            </NavItem>
+            <SearchWrapper>
+                <CSSTransition 
+                    in={props.focused}
+                    timeout={200}
+                    classNames="slide">
+                    <NavSearch 
+                        className={props.focused ? 'focused' : ''}
+                        onFocus={props.handleInputFocus}
+                        onBlur={props.handleInputBlur}>
+                    </NavSearch>
+                </CSSTransition>
+                <GrFormSearch className={props.focused ? 'icon focused' : 'icon'}/>
+            </SearchWrapper>
+        </Nav>
+        <Addition>
+            <Button className='writting'>
+                <ImQuill/>
+                Article
+            </Button>
+            <Button className='reg'>Register</Button>
+        </Addition>
+        </HeadeWrapper>
+    )
+}
 
-    render() {
-        return (
-            <HeadeWrapper>
-            <Logo/>
-            <Nav>
-                <NavItem className='left active'>Home</NavItem>
-                <NavItem className='left'>Download</NavItem>
-                <NavItem className='right'>Login</NavItem>
-                <NavItem className='right'>
-                    <RiFontSize/>
-                </NavItem>
-                <SearchWrapper>
-                    <CSSTransition 
-                        in={this.state.focused}
-                        timeout={200}
-                        classNames="slide">
-                        <NavSearch 
-                            className={this.state.focused ? 'focused' : ''}
-                            onFocus={this.handleInputFocus}
-                            onBlur={this.handleInputBlur}>
-                        </NavSearch>
-                    </CSSTransition>
-                    <GrFormSearch className={this.state.focused ? 'icon focused' : 'icon'}/>
-                </SearchWrapper>
-            </Nav>
-            <Addition>
-                <Button className='writting'>
-                    <ImQuill/>
-                    Article
-                </Button>
-                <Button className='reg'>Register</Button>
-            </Addition>
-            </HeadeWrapper>
-        )
+// stateful class component
+// class Header extends Component {
+//     render() {
+//         return (
+//             <HeadeWrapper>
+//             <Logo/>
+//             <Nav>
+//                 <NavItem className='left active'>Home</NavItem>
+//                 <NavItem className='left'>Download</NavItem>
+//                 <NavItem className='right'>Login</NavItem>
+//                 <NavItem className='right'>
+//                     <RiFontSize/>
+//                 </NavItem>
+//                 <SearchWrapper>
+//                     <CSSTransition 
+//                         in={this.props.focused}
+//                         timeout={200}
+//                         classNames="slide">
+//                         <NavSearch 
+//                             className={this.props.focused ? 'focused' : ''}
+//                             onFocus={this.props.handleInputFocus}
+//                             onBlur={this.props.handleInputBlur}>
+//                         </NavSearch>
+//                     </CSSTransition>
+//                     <GrFormSearch className={this.props.focused ? 'icon focused' : 'icon'}/>
+//                 </SearchWrapper>
+//             </Nav>
+//             <Addition>
+//                 <Button className='writting'>
+//                     <ImQuill/>
+//                     Article
+//                 </Button>
+//                 <Button className='reg'>Register</Button>
+//             </Addition>
+//             </HeadeWrapper>
+//         )
+//     }
+// }
+
+const mapStateToProps = (state) => {
+    return {
+        focused: state.header.focused
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleInputFocus() {
+            const action = {
+                type: 'search_focus'
+            }
+            dispatch(action)
+        },
+        handleInputBlur() {
+            const action = {
+                type: 'search_blur'
+            }
+            dispatch(action)
+        }
     }
 }
 
-export default Header
+export default connect(mapStateToProps, mapDispatchToProps)(Header)
