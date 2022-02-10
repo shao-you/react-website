@@ -1,6 +1,6 @@
 {
     "success": true,
-    "data": ["edu", "sport", "news", "game"], 
+    "data": ["edu", "sport", "news", "game", "health", "politic", "environment", "weather", "technology", "people", "market", "stock"], 
     "react": ["xx", "yy", "zz"],
     "posts": [
       {

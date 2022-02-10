@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import logoPic from '../../statics/logo.png'
+import logoPic from '../../statics/taiwan.jpg'
 
 export const HeadeWrapper = styled.div`
     position: relative;
@@ -14,9 +14,11 @@ export const Logo = styled.a.attrs({
     top: 0;
     left: 0;
     display: block;
-    width: 100px;    
+    width: 58px;    
     height: 58px;
     background: url(${logoPic});
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: contain;
 `
 export const Nav = styled.div`
@@ -41,7 +43,7 @@ export const NavItem = styled.div`
     }
     &.active {
         float: left;
-        color: #ea6f5a;
+        //color: #ea6f5a;
     }
 `
 export const NavSearch = styled.input.attrs({
@@ -97,6 +99,13 @@ export const SearchInfoTitle = styled.div`
 export const SearchInfoChange = styled.span`
     float: right;    
     font-size: 13px;
+    cursor: pointer;
+    .spin {
+        font-size: 12px;
+        margin-right: 3px;
+        transition: all .2s ease-in;
+        // transform: rotate()
+    }
 `
 export const SearchInfoItem = styled.a`
     display: block;

@@ -13,7 +13,8 @@ export const searchBlur = () => ({
 // return an object
 export const changeHotList = (data) => ({
     type: constants.CHANGE_HOT_LIST,
-    data: fromJS(data)
+    data: fromJS(data),
+    totalPage: Math.ceil(data.length / 5)
 })
 // return a function
 export const getHotList = () => {
@@ -29,3 +30,16 @@ export const getHotList = () => {
         })
     }
 }
+// return an object
+export const mouseEnter = () => ({
+    type: constants.MOUSE_ENTER
+})
+// return an object
+export const mouseLeave = () => ({
+    type: constants.MOUSE_LEAVE
+})
+// return an object
+export const changePage = (page) => ({
+    type: constants.CHANGE_PAGE,
+    page
+})
