@@ -23,6 +23,7 @@ export const TopicWrapper = styled.div`
     overflow: hidden;
     padding: 20px 0 10px 0;
     margin-left: -18px;
+    border-bottom: 1px solid #dcdcdc;
 `
 export const TopicItem = styled.div`
     float: left;
@@ -35,7 +36,7 @@ export const TopicItem = styled.div`
     font-size: 14px;
     color: #000;
     border: 1px solid #dcdcdc;
-    boeder-radius: 4px;
+    border-radius: 4px;
     .topic-pic {
         display: block;
         float: left;
