@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 import logoPic from '../../statics/taiwan.jpg'
+import {Github} from '@styled-icons/boxicons-logos'
+import {FacebookCircle} from '@styled-icons/boxicons-logos'
+import {LinkedinSquare} from '@styled-icons/boxicons-logos'
 
 export const HeadeWrapper = styled.div`
     position: relative;
-    height: 58px;
+    margin: 0;
+    height: 46px;
     border-bottom: 1px solid #f0f0f0;
-    // background: green;
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 `
 export const Logo = styled.a.attrs({
     href: '/'
@@ -14,26 +18,33 @@ export const Logo = styled.a.attrs({
     top: 0;
     left: 0;
     display: block;
-    width: 58px;    
-    height: 58px;
+    width: 46px;    
+    height: 46px;
     background: url(${logoPic});
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 `
 export const Nav = styled.div`
-    width: 960px;
     height: 100%;
-    padding-right: 120px; 
     box-sizing: border-box;
     margin: 0 auto;
-    // background: orange;
+    background: #4D4D4D;
 `
 export const NavItem = styled.div`
-    line-height: 56px;
+    display: block;
+    text-align: center;
+    line-height: 46px;
     padding: 0 15px;
-    font-size: 17px;
-    color: #333;
+    font-family: 'Lato', sans-serif;
+    //font-size: 17px;
+    color: #ebe9eb;
+    cursor: pointer;
+    text-decoration: none;
+    //border-right: 1px solid #000000;
+    :hover {
+        background-color: #000000;
+    }
     &.left {
         float: left;
     }
@@ -46,20 +57,66 @@ export const NavItem = styled.div`
         //color: #ea6f5a;
     }
 `
+export const GithubItem = styled(Github)`
+    text-decoration: none;
+    color: #4D4D4D;
+    float: right;
+    opacity: 0.65;
+    background: white;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+`
+export const FBItem = styled(FacebookCircle)`
+    text-decoration: none;
+    color: #4D4D4D;
+    float: right;
+    opacity: 0.65;
+    background: white;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+`
+export const LinkedInItem = styled(LinkedinSquare)`
+    text-decoration: none;
+    color: #4D4D4D;
+    float: right;
+    opacity: 0.65;
+    background: white;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+`
+export const SearchWrapper = styled.div`
+    position: relative;
+    margin-right: 100px;
+    float: left;
+    .icon {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        //top: 10px;
+        width: 23px;
+        height: 23px;
+        border-radius: 15px;
+        text-align: center;
+        &.focused {
+            background: #999;
+        }
+    }
+`
 export const NavSearch = styled.input.attrs({
     placeholder: 'Search'
 })`
     width: 160px;
-    height: 38px;
+    height: 30px;
     padding: 0 30px 0 20px;
-    margin-top: 9px;
-    margin-left: 20px;
+    margin: 8px;
     box-sizing: border-box; //
     border: none;
     outline: none; //
-    border-radius: 19px;
+    border-radius: 5px;
     background: #eee;
-    font-size: 14px;
     color: #666;
     &::placeholder {
         color: #999;
@@ -82,11 +139,12 @@ export const NavSearch = styled.input.attrs({
 `
 export const SearchInfo = styled.div`
     position: absolute;
-    left: 0;
-    top: 56px;
-    width 240px;
+    left: 10px;
+    top: 42px;
+    width 220px;
     padding: 0 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+    border-radius: 5px;
     background: white;
 `
 export const SearchInfoTitle = styled.div`
@@ -143,23 +201,5 @@ export const Button = styled.div`
     &.writting {
         color: #fff;
         background: #ec6149;
-    }
-`
-export const SearchWrapper = styled.div`
-    position: relative;
-    float: left;
-    .icon {
-        position: absolute;
-        right: 5px;
-        bottom: 5px;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        text-align: center;
-        // background: green;
-        &.focused {
-            background: #777;
-            color: #fff;
-        }
     }
 `

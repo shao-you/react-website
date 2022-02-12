@@ -2,13 +2,14 @@ import styled from 'styled-components'
 
 export const HomeWrapper = styled.div`
     overflow: hidden;
-    width: 960px;
+    //width: 960px;
     margin: 0 auto;
+    background: #f7f7f7;
 `
 export const HomeLeft = styled.div`
     float: left;
-    margin-left: 15px;
-    padding-top: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
     width: 625px;
     .banner-img {
         width: 625px;
@@ -16,8 +17,11 @@ export const HomeLeft = styled.div`
     }
 `
 export const HomeRight = styled.div`
-    width: 240px;
+    //width: 240px;
     float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    
 `
 export const TopicWrapper = styled.div`
     overflow: hidden;
@@ -44,4 +48,17 @@ export const TopicItem = styled.div`
         height: 32px;
         margin-right: 10px;
     }
+`
+export const BackTop = styled.div`
+    position: fixed;
+    right: 20px;
+    //top: 100px;
+    bottom: 50px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 14px;
 `

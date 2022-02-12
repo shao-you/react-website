@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import Topic from './components/Topic'
 import Recommend from './components/Recommend'
-import Writer from './components/Writer'
+import Clock from './components/Clock'
 import List from './components/List'
 import {
     HomeWrapper,
     HomeLeft,
-    HomeRight
+    HomeRight,
+    BackTop
 } from './style'
+import { connect } from 'react-redux'
+import { actionCreators } from './store'
 
 class Home extends Component {
     render() {
@@ -19,12 +22,37 @@ class Home extends Component {
                     <List></List>
                 </HomeLeft>
                 <HomeRight>
-                    <Recommend></Recommend>
-                    <Writer></Writer>
+                    {/* <Recommend></Recommend> */}
+                    <Clock></Clock>
                 </HomeRight>
+                {
+                    this.props.showCroll ? <BackTop onClick={this.handleScrollTop}>Top</BackTop> : null
+                }
             </HomeWrapper>
         )
     }
+    componentDidMount() {
+        window.addEventListener('scroll', this.props.changeScollTopShow)
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.props.changeScollTopShow)
+    }
+    handleScrollTop() {
+        window.scrollTo(0, 0)
+    }
 }
 
-export default Home
+const mapState = (state) => ({
+    showCroll: state.get('home').get('showCroll')
+})
+const mapDispatch = (dispatch) => ({
+    changeScollTopShow() {
+        // console.log(document.documentElement.scrollTop)
+        if (document.documentElement.scrollTop > 20) {
+            dispatch(actionCreators.toggleTopShow(true))
+        } else {
+            dispatch(actionCreators.toggleTopShow(false))
+        }
+    }
+})
+export default connect(mapState, mapDispatch)(Home)

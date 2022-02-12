@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-class Writer extends Component {
+class Taiwan extends Component {
     render() {
         return (
-            <div>Writer</div>
+            <div>Taiwan</div>
         )
     }
 }
 
-export default Writer
+export default Taiwan

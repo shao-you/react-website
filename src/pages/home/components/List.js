@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class List extends Component {
     render() {
         return (
-            <div>List</div>
+            <Link to='/demo'>test</Link> // use react router to load pages "only one time"
+            // <a href='/demo'>List</a>
         )
     }
 }

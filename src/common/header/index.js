@@ -3,8 +3,8 @@ import { CSSTransition } from 'react-transition-group'
 import { connect } from 'react-redux'
 import { ImQuill, ImSpinner9 } from 'react-icons/im'
 import { GrFormSearch } from 'react-icons/gr'
-import { RiFontSize } from 'react-icons/ri'
 import { actionCreators } from './store'
+import { Link } from 'react-router-dom'
 import {
   HeadeWrapper,
   Logo,
@@ -18,7 +18,10 @@ import {
   SearchInfoTitle,
   SearchInfoChange,
   SearchInfoItem,
-  SearchInfoList
+  SearchInfoList,
+  GithubItem,
+  FBItem,
+  LinkedInItem
 } from './style'
 
 const getListArea = (props) => {
@@ -61,14 +64,20 @@ const Header = (props) => {
     const nodeRef = React.useRef(null) // to fix warning
     return (
         <HeadeWrapper>
-            <Logo/>
+            {/* <Logo/> */}
             <Nav>
-                <NavItem className='left active'>Home</NavItem>
-                <NavItem className='left'>Download</NavItem>
-                <NavItem className='right'>Login</NavItem>
-                <NavItem className='right'>Aa
-                    {/* <RiFontSize style={{height:'35px', marginTop:'12px'}}/> */}
-                </NavItem>
+                <Link to='/'>
+                    <NavItem className='left active'>Home</NavItem>
+                </Link>
+                <Link to='/demo'>
+                    <NavItem className='left'>Demo</NavItem>
+                </Link>
+                <Link to='/blog'>
+                    <NavItem className='left'>Blog</NavItem>
+                </Link>
+                <Link to='/taiwan'>
+                    <NavItem className='left'>Taiwan</NavItem>
+                </Link>
                 <SearchWrapper>
                     <CSSTransition 
                         nodeRef={nodeRef} // to fix warning
@@ -76,22 +85,25 @@ const Header = (props) => {
                         timeout={200}
                         classNames="slide">
                         <NavSearch 
-                            className={props.focused ? 'focused' : ''}
+                            className={(props.focused || props.mouseIn) ? 'focused' : ''}
                             onFocus={() => props.handleInputFocus(props.list)}
                             onBlur={props.handleInputBlur}>
                         </NavSearch>
                     </CSSTransition>
-                    <GrFormSearch className={props.focused ? 'icon focused' : 'icon'}/>
+                    <GrFormSearch className={(props.focused || props.mouseIn) ? 'icon focused' : 'icon focused'}/>
                     {getListArea(props)}
                 </SearchWrapper>
+                <a href='https://github.com/shao-you' target="_blank"><GithubItem/></a>
+                <a href='https://www.facebook.com/shaoyou.wu' target="_blank"><FBItem/></a>
+                <a href='https://www.linkedin.com/in/shaoyou/' target="_blank"><LinkedInItem/></a>
             </Nav>
-            <Addition>
+            {/* <Addition>
                 <Button className='writting'>
                     <ImQuill/>
                     Article
                 </Button>
                 <Button className='reg'>Register</Button>
-            </Addition>
+            </Addition> */}
         </HeadeWrapper>
     )
 }
