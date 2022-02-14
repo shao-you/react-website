@@ -1,0 +1,22 @@
+{
+    "success": true,
+    "data": ["edu", "sport", "news", "game", "health", "politic", "environment", "weather", "technology", "people", "market", "stock"], 
+    "react": ["xx", "yy", "zz"],
+    "posts": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
