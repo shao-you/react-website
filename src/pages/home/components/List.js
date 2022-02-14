@@ -6,6 +6,7 @@ class List extends Component {
         return (
             <Link to='/demo'>test</Link> // use react router to load pages "only one time"
             // <a href='/demo'>List</a>
+            // <a href="../../pages/demo/resume.html">Redirect to Html page</a>
         )
     }
 }
