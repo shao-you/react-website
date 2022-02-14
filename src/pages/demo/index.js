@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import TodoList from './TodoList'
-//import "./css/styles.css"
 
 class Demo extends Component {
     render() {

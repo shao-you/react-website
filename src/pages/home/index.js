@@ -18,6 +18,7 @@ class Home extends Component {
             <HomeWrapper>
                 <HomeLeft>
                     <img className='banner-img' alt='Taipei 101' src='https://www.bakermckenzie.com/-/media/images/locations/taiwan_header_new.jpg'/>
+                    {/* <img className='banner-img' alt='nctu' src={'/statics/NCTU_logo_with_namestyle.svg.png'}/> */}
                     <Topic></Topic>
                     <List></List>
                 </HomeLeft>

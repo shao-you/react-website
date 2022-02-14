@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import Header from './common/header'
 import store from './store'
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home'
 import Demo from './pages/demo'
 import Blog from './pages/blog'
@@ -19,7 +19,6 @@ class App extends Component {
               <Route exact path='/demo' element = {<Demo/>}></Route>
               <Route exact path='/blog' element = {<Blog/>}></Route>
               <Route exact path='/taiwan' element = {<Taiwan/>}></Route>
-              {/* <Route exact path='./pages/demo/index1.html' element = {<Demo/>}></Route> */}
             </Routes>
           </BrowserRouter>
       </Provider>
