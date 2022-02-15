@@ -23,9 +23,10 @@ export const initListAction = (data) => ({
 })
 
 // return an action "function" (redux-thunk)
-export const getTodoList = () => {
+export const getTodoList = (id) => {
     return (dispatch) => {
-        axios.get('/api/test.json').then((res) => {
+        // console.log(id);
+        axios.get('/api/test.json?id=' + id).then((res) => {
             // console.log(res);    
             const data = res.data
             const action = initListAction(data.react)

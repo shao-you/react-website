@@ -4,28 +4,26 @@ import { connect } from 'react-redux'
 import { ImQuill, ImSpinner9 } from 'react-icons/im'
 import { GrFormSearch } from 'react-icons/gr'
 import { actionCreators } from './store'
-import { Link } from 'react-router-dom'
+import { actionCreators as loginActionCreators } from '../../pages/login/store'
+import { Link, Navigate } from 'react-router-dom'
 import {
-  HeadeWrapper,
-  Logo,
-  Nav,
-  NavItem,
-  NavSearch,
-  Addition,
-  Button,
-  SearchWrapper,
-  SearchInfo,
-  SearchInfoTitle,
-  SearchInfoChange,
-  SearchInfoItem,
-  SearchInfoList,
-  GithubItem,
-  FBItem,
-  LinkedInItem
+    HeadeWrapper,
+    Nav,
+    NavItem,
+    NavSearch,
+    Addition,
+    Button,
+    SearchWrapper,
+    SearchInfo,
+    SearchInfoTitle,
+    SearchInfoChange,
+    SearchInfoItem,
+    SearchInfoList
 } from './style'
 
 const getListArea = (props) => {
-    const { focused, list, page, totalPage, mouseIn, handleMouseEnter, handleMouseLeave, handleChangePage } = props
+    const { focused, list, page, totalPage, mouseIn, 
+        handleMouseEnter, handleMouseLeave, handleChangePage } = props
     const jsList = list.toJS() // list is an immutable object, transfer to normal object
     const pageList = []
 
@@ -64,7 +62,6 @@ const Header = (props) => {
     const nodeRef = React.useRef(null) // to fix warning
     return (
         <HeadeWrapper>
-            {/* <Logo/> */}
             <Nav>
                 <Link to='/'>
                     <NavItem className='left active'>Home</NavItem>
@@ -78,6 +75,12 @@ const Header = (props) => {
                 <Link to='/taiwan'>
                     <NavItem className='left'>Taiwan</NavItem>
                 </Link>
+                {
+                    props.loginState ? 
+                    <NavItem onClick={props.logout} className='right'>Logout</NavItem> : 
+                    <Link to='/login'><NavItem className='right'>Login</NavItem></Link>
+                }
+                {/* {<Navigate to='/login'/>} */}
                 <SearchWrapper>
                     <CSSTransition 
                         nodeRef={nodeRef} // to fix warning
@@ -90,12 +93,9 @@ const Header = (props) => {
                             onBlur={props.handleInputBlur}>
                         </NavSearch>
                     </CSSTransition>
-                    <GrFormSearch className={(props.focused || props.mouseIn) ? 'icon focused' : 'icon focused'}/>
+                    <GrFormSearch className={(props.focused || props.mouseIn) ? 'icon focused' : 'icon'}/>
                     {getListArea(props)}
                 </SearchWrapper>
-                <a href='https://github.com/shao-you' target="_blank"><GithubItem/></a>
-                <a href='https://www.facebook.com/shaoyou.wu' target="_blank"><FBItem/></a>
-                <a href='https://www.linkedin.com/in/shaoyou/' target="_blank"><LinkedInItem/></a>
             </Nav>
             {/* <Addition>
                 <Button className='writting'>
@@ -181,7 +181,8 @@ const mapStateToProps = (state) => { // map state from store
         list: state.get('header').get('list'),
         page: state.get('header').get('page'),
         totalPage: state.get('header').get('totalPage'),
-        mouseIn: state.get('header').get('mouseIn')
+        mouseIn: state.get('header').get('mouseIn'),
+        loginState: state.get('login').get('loginState')
     }
 }
 const mapDispatchToProps = (dispatch) => {
@@ -208,6 +209,9 @@ const mapDispatchToProps = (dispatch) => {
             } else {
                 dispatch(actionCreators.changePage(1))
             }
+        },
+        logout() {
+            dispatch(loginActionCreators.logout())
         }
     }
 }

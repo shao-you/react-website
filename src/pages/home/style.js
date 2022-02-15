@@ -1,5 +1,32 @@
 import styled from 'styled-components'
+import {Github} from '@styled-icons/boxicons-logos'
+import {FacebookCircle} from '@styled-icons/boxicons-logos'
+import {LinkedinSquare} from '@styled-icons/boxicons-logos'
 
+export const GithubItem = styled(Github)`
+    color: #4D4D4D;
+    //opacity: 0.65;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+`
+export const FBItem = styled(FacebookCircle)`
+    color: #4D4D4D;
+    //opacity: 0.65;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+`
+export const LinkedInItem = styled(LinkedinSquare)`
+    color: #4D4D4D;
+    //opacity: 0.65;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+`
 export const HomeWrapper = styled.div`
     overflow: hidden;
     //width: 960px;
@@ -21,7 +48,6 @@ export const HomeRight = styled.div`
     float: right;
     margin-right: 10px;
     margin-top: 10px;
-    
 `
 export const TopicWrapper = styled.div`
     overflow: hidden;
@@ -44,7 +70,7 @@ export const TopicItem = styled.div`
     .topic-pic {
         display: block;
         float: left;
-        width: 32px;
+        //width: 32px;
         height: 32px;
         margin-right: 10px;
     }

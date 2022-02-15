@@ -8,7 +8,7 @@ module.exports = `<!DOCTYPE html>
 <meta charset="UTF-8"> 
 
 <link type="text/css" rel="stylesheet" href="style.css">
-<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,11 +28,15 @@ module.exports = `<!DOCTYPE html>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
+		<a href="#" target="_blank">
+		<button class="btn"><i class="fa fa-download"></i> Download CV</button></a>
+
 			<ul>
-				<li><a href="mailto:brian.sy.wu@gmail.com" target="_blank">brian.sy.wu@gmail.com</a></li>
-				<li><a href="http://BrianWu.tw">shaoyouwu.com</a></li>
-				<li>+44-07516549952</li>
-				<li>Manchester, United Kingdom<li>
+				
+				<li><i class="fa fa-envelope" style="font-size:10px;margin:1px;"></i><a href="mailto:brian.sy.wu@gmail.com" target="_blank"> brian.sy.wu@gmail.com</a></li>
+				<li><i class="fa fa-home" style="font-size:15px;margin:1px;"></i><a href="http://shaoyouwu.com"> shaoyouwu.com</a></li>
+				<li><i class="fa fa-mobile" style="font-size:17px;margin:1px;"></i> +44-07516549952</li>
+				<li><i class="fa fa-map-marker" style="font-size:15px;margin:1px;"></i> Manchester, United Kingdom<li>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -63,7 +67,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 
 			<div class="clear"></div>
-			<img src="../../statics/PRIMARY-MASTER-LOGO_EN_CMYK_ORANGE.png" alt="Mediatek" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="/statics/PRIMARY-MASTER-LOGO_EN_CMYK_ORANGE.png" alt="Mediatek" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">4G/5G Software Engineer</h2>
@@ -179,9 +183,20 @@ module.exports = `<!DOCTYPE html>
 			<div class="sectionContent">
 				<article>
 					<ol>
-						<li>Ming-Hung Wang, Shao-You Wu, Li-Hsing Yen and Chien-Chao Tseng, <span style="color:blue">"PathMon: Path-specific traffic monitoring in OpenFlow-enabled networks,"</span> 2016 Eighth International Conference on Ubiquitous and Future Networks (ICUFN), 2016, pp. 775-780, doi: 10.1109/ICUFN.2016.7537143.</li>
-						<li>S. Wu and J. Liu, <span style="color:blue">"Evolutionary path planning of a data mule in wireless sensor network by using shortcuts,"</span> 2014 IEEE Congress on Evolutionary Computation (CEC), 2014, pp. 2708-2715, doi: 10.1109/CEC.2014.6900511.</li>
-						<li>J. Liu, S. Wu and K. Chiu, <span style="color:blue">"Path planning of a data mule in wireless sensor network using an improved implementation of clustering-based genetic algorithm,"</span> 2013 IEEE Symposium on Computational Intelligence in Control and Automation (CICA), 2013, pp. 30-37, doi: 10.1109/CICA.2013.6611660.</li>
+						<li>Ming-Hung Wang, Shao-You Wu, Li-Hsing Yen and Chien-Chao Tseng, 
+						<a href="https://ieeexplore.ieee.org/document/7537143" target="_blank" style="color:blue;">
+						"PathMon: Path-specific traffic monitoring in OpenFlow-enabled networks,"
+						</a> 2016 Eighth International Conference on Ubiquitous and Future Networks (ICUFN), 2016, pp. 775-780, doi: 10.1109/ICUFN.2016.7537143.</li>
+						
+						<li>S. Wu and J. Liu, 
+						<a href="https://ieeexplore.ieee.org/document/6900511" target="_blank" style="color:blue;">
+						"Evolutionary path planning of a data mule in wireless sensor network by using shortcuts,"
+						</a> 2014 IEEE Congress on Evolutionary Computation (CEC), 2014, pp. 2708-2715, doi: 10.1109/CEC.2014.6900511.</li>
+						
+						<li>J. Liu, S. Wu and K. Chiu, 
+						<a href="https://ieeexplore.ieee.org/document/6611660" target="_blank" style="color:blue;">
+						"Path planning of a data mule in wireless sensor network using an improved implementation of clustering-based genetic algorithm,"
+						</a> 2013 IEEE Symposium on Computational Intelligence in Control and Automation (CICA), 2013, pp. 30-37, doi: 10.1109/CICA.2013.6611660.</li>
 					</ol>
 				</article>
 			</div>

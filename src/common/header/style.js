@@ -1,8 +1,4 @@
 import styled from 'styled-components'
-import logoPic from '../../statics/taiwan.jpg'
-import {Github} from '@styled-icons/boxicons-logos'
-import {FacebookCircle} from '@styled-icons/boxicons-logos'
-import {LinkedinSquare} from '@styled-icons/boxicons-logos'
 
 export const HeadeWrapper = styled.div`
     position: relative;
@@ -20,7 +16,7 @@ export const Logo = styled.a.attrs({
     display: block;
     width: 46px;    
     height: 46px;
-    background: url(${logoPic});
+    background: url(${process.env.PUBLIC_URL + '/statics/taiwan.jpg'});
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -36,12 +32,12 @@ export const NavItem = styled.div`
     text-align: center;
     line-height: 46px;
     padding: 0 15px;
-    font-family: 'Lato', sans-serif;
-    //font-size: 17px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 530;
     color: #ebe9eb;
     cursor: pointer;
     text-decoration: none;
-    //border-right: 1px solid #000000;
+    border-right: 1px solid #666;
     :hover {
         background-color: #000000;
     }
@@ -50,47 +46,15 @@ export const NavItem = styled.div`
     }
     &.right {
         float: right;
-        color: #969696;
     }
     &.active {
-        float: left;
-        //color: #ea6f5a;
+        //color: #999;
     }
-`
-export const GithubItem = styled(Github)`
-    text-decoration: none;
-    color: #4D4D4D;
-    float: right;
-    opacity: 0.65;
-    background: white;
-    cursor: pointer;
-    width: 46px;    
-    height: 46px;
-`
-export const FBItem = styled(FacebookCircle)`
-    text-decoration: none;
-    color: #4D4D4D;
-    float: right;
-    opacity: 0.65;
-    background: white;
-    cursor: pointer;
-    width: 46px;    
-    height: 46px;
-`
-export const LinkedInItem = styled(LinkedinSquare)`
-    text-decoration: none;
-    color: #4D4D4D;
-    float: right;
-    opacity: 0.65;
-    background: white;
-    cursor: pointer;
-    width: 46px;    
-    height: 46px;
 `
 export const SearchWrapper = styled.div`
     position: relative;
-    margin-right: 100px;
-    float: left;
+    //margin-right: 40px;
+    float: right;
     .icon {
         position: absolute;
         right: 12px;
@@ -110,11 +74,11 @@ export const NavSearch = styled.input.attrs({
 })`
     width: 160px;
     height: 30px;
-    padding: 0 30px 0 20px;
+    padding: 0 20px;
     margin: 8px;
-    box-sizing: border-box; //
+    box-sizing: border-box;
     border: none;
-    outline: none; //
+    outline: none;
     border-radius: 5px;
     background: #eee;
     color: #666;
@@ -139,9 +103,11 @@ export const NavSearch = styled.input.attrs({
 `
 export const SearchInfo = styled.div`
     position: absolute;
-    left: 10px;
+    //left: 10px;
+    z-index: 3;
     top: 42px;
-    width 220px;
+    width 240px;
+    margin: 8px;
     padding: 0 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, .2);
     border-radius: 5px;

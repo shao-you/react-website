@@ -39,7 +39,7 @@ class TodoList extends Component {
                     dataSource={list}
                     renderItem={(item, index) => (
                         <List.Item onClick={() => {handleItemDelete(index)}}> 
-                            {/* onClick is assigned an "arrow function" */}
+                            {/* onClick registered an "arrow function" */}
                             {item}
                         </List.Item>
                     )}
@@ -48,7 +48,7 @@ class TodoList extends Component {
         )
     }
     componentDidMount() {
-        this.props.handleStoreChange()
+        this.props.handleStoreChange(this.props.id)
     }
 }
 
@@ -59,10 +59,11 @@ class TodoList extends Component {
 //     list: PropTypes.array,
 //     handleItemDelete: PropTypes.func
 // })
-TodoList.defaultProps = {
-    inputValue: 'xxx',
-    list: ['55', '66']
-}
+// TodoList.defaultProps = {
+//     inputValue: 'xxx',
+//     list: ['55', '66']
+// }
+
 const mapState = (state) => {
     return {
         inputValue: state.get('demo').get('inputValue'),
@@ -71,8 +72,8 @@ const mapState = (state) => {
 }
 const mapDispatch = (dispatch) => {
     return {
-        handleStoreChange() {
-            dispatch(actionCreators.getTodoList())
+        handleStoreChange(id) {
+            dispatch(actionCreators.getTodoList(id))
         },
         handleInputChange(e) {
             dispatch(actionCreators.getInputChangeAction(e.target.value))

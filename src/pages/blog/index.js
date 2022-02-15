@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import './style.css'
-var __html = require('./cv.html.js');
-var template = { __html: __html };
+var html_file = require('./cv.html.js');
+var content = { __html: html_file };
 
 class Blog extends Component {
     render() {
         return (
             //<div>Blog</div>
-            <div dangerouslySetInnerHTML={template} />
+            <div dangerouslySetInnerHTML={content} />
         )
     }
 }

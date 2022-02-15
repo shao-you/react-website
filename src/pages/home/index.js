@@ -7,7 +7,10 @@ import {
     HomeWrapper,
     HomeLeft,
     HomeRight,
-    BackTop
+    BackTop,
+    GithubItem,
+    FBItem,
+    LinkedInItem
 } from './style'
 import { connect } from 'react-redux'
 import { actionCreators } from './store'
@@ -18,7 +21,9 @@ class Home extends Component {
             <HomeWrapper>
                 <HomeLeft>
                     <img className='banner-img' alt='Taipei 101' src='https://www.bakermckenzie.com/-/media/images/locations/taiwan_header_new.jpg'/>
-                    {/* <img className='banner-img' alt='nctu' src={'/statics/NCTU_logo_with_namestyle.svg.png'}/> */}
+                    <a href='https://github.com/shao-you/' target="_blank">Click<GithubItem/></a>
+                    <a href='https://www.facebook.com/shaoyou.wu/' target="_blank">Click<FBItem/></a>
+                    <a href='https://www.linkedin.com/in/shaoyou/' target="_blank">Click<LinkedInItem/></a>
                     <Topic></Topic>
                     <List></List>
                 </HomeLeft>

@@ -1,13 +1,26 @@
 import React, { Component } from 'react'
 import TodoList from './TodoList'
+import { connect } from 'react-redux'
+import { actionCreators } from './store'
+import { useParams } from 'react-router-dom'
 
-class Demo extends Component {
-    render() {
-        return (
-            <TodoList/>
-            // <div dangerouslySetInnerHTML={ {__html: htmlContent} }>Demo</div>
-        )
+// stateless function component
+const Demo = () => {
+    const { id } = useParams() // React Hooks "useParams" must be called in a React function component 
+    // console.log(id)
+    return (
+        <TodoList id={id}/>
+    )
+}
+const mapStateToProps = (state) => {
+    return {
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleChangePage() {
+        }
     }
 }
 
-export default Demo
+export default connect(mapStateToProps, mapDispatchToProps)(Demo)
