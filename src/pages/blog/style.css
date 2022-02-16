@@ -8,9 +8,8 @@ vertical-align:baseline;
 } */
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-display:block;
+	display:block;
 }
-
 
 /* html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px; color: #222;} */
 
@@ -135,7 +134,6 @@ div ol{
 #contactDetails ul li a:hover { 
 	color: #666;
 }
-
 
 section {
 	border-top: 1px solid #dedede;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {Github} from '@styled-icons/boxicons-logos'
-import {FacebookCircle} from '@styled-icons/boxicons-logos'
-import {LinkedinSquare} from '@styled-icons/boxicons-logos'
+import { Github } from '@styled-icons/boxicons-logos'
+import { FacebookCircle } from '@styled-icons/boxicons-logos'
+import { LinkedinSquare } from '@styled-icons/boxicons-logos'
 
 export const GithubItem = styled(Github)`
     color: #4D4D4D;

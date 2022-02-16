@@ -6,7 +6,7 @@ import { actionCreators } from './store'
 
 // stateless function component
 const Login = (props) => {
-    if(!props.loginState) {
+    if (!props.loginState) {
         let account = ''
         let password = ''
         return (

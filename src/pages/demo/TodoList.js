@@ -12,7 +12,7 @@ class TodoList extends Component {
     // shouldComponentUpdate(nextProps, nextState) {
     //     // console.log(nextState.get('demo').get('inputValue'))
     //     // console.log(this.props.inputValue)
-    //     if(nextState.get('demo') !== this.props) {
+    //     if (nextState.get('demo') !== this.props) {
     //         console.log(this.state.get('demo').get('list'))
     //         console.log(store.getState().get('demo').get('list'))
     //         return true

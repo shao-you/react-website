@@ -150,7 +150,7 @@ const Header = (props) => {
 
 //     getListArea = () => {
 //         const { focused } = this.props
-//         if(focused) {
+//         if (focused) {
 //             return (
 //                 <SearchInfo>
 //                     <SearchInfoTitle>
@@ -189,7 +189,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handleInputFocus(list) {
             // console.log(list) // print out to see the structure
-            if(list.size === 0) { // only first time to get data via api
+            if (list.size === 0) { // only first time to get data via api
                 dispatch(actionCreators.getHotList())
             }
             dispatch(actionCreators.searchFocus())
@@ -204,7 +204,7 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(actionCreators.mouseLeave())
         },
         handleChangePage(page, totalPage) {
-            if(page < totalPage) {
+            if (page < totalPage) {
                 dispatch(actionCreators.changePage(page + 1))
             } else {
                 dispatch(actionCreators.changePage(1))
