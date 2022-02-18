@@ -5,7 +5,7 @@ const defaultState = fromJS({
     loginState: false
 })
 
-export default (state = defaultState, action) => {
+const reducer = (state = defaultState, action) => {
     switch(action.type) {
         case constants.CHANGE_LOGIN_STATE:
             return state.set('loginState', action.value)
@@ -13,3 +13,5 @@ export default (state = defaultState, action) => {
             return state
     }
 }
+
+export default reducer

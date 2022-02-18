@@ -9,7 +9,7 @@ const Demo = () => {
     const { id } = useParams() // React Hooks "useParams" must be called in a React function component 
     // console.log(id)
     return (
-        <TodoList id={id}/>
+        <TodoList id={id}/> // id is url parameter
     )
 }
 const mapStateToProps = (state) => {
@@ -18,8 +18,6 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleChangePage() {
-        }
     }
 }
 

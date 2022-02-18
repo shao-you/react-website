@@ -10,7 +10,7 @@ const defaultState = fromJS({
 // reducer is a "function"
 // reducer CANNOT change state, state shoule chage it itself
 // reducer must be a "pure function": 1) no side effect 2) same input causes same output
-export default (state = defaultState, action) => {
+const reducer = (state = defaultState, action) => {
     switch(action.type) {
         case constants.CHANGE_INPUT_VALUE:
             return state.set('inputValue', action.value)
@@ -25,3 +25,5 @@ export default (state = defaultState, action) => {
             return state
     }
 }
+
+export default reducer

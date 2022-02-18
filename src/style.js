@@ -22,6 +22,9 @@ const GlobalStyle = createGlobalStyle`
         font: inherit;
         vertical-align: baseline;
     }
+    #root, body {
+        background: #eee;
+    }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
     footer, header, hgroup, menu, nav, section {

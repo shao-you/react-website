@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import 'antd/dist/antd.css'
+// import 'antd/dist/antd.css'
+import 'antd/dist/antd.min.css'
 import { connect } from 'react-redux'
 import { actionCreators } from './store'
 import { Input, Button, List } from 'antd'
@@ -23,18 +24,18 @@ class TodoList extends Component {
     render() {
         const { inputValue, list, handleInputChange, handleBtnClick, handleItemDelete } = this.props
         return (
-            <div style={{marginTop: '10px', marginLeft: '10px'}}>
+            <div style={{margin: '7px', float: 'left'}}>
                 <div>
                     <Input 
                         value={inputValue} 
-                        placeholder='todo info' 
-                        style={{width: '300px', marginRight: '10px'}}
+                        placeholder='ToDo List' 
+                        style={{width: '300px', marginRight: '5px'}}
                         onChange={handleInputChange}
                     />
                     <Button type="primary" onClick={handleBtnClick}>Submit</Button>
                 </div>
                 <List 
-                    style={{marginTop: '10px', width: '300px'}}
+                    style={{marginTop: '10px', width: '300px', background: 'white'}}
                     bordered
                     dataSource={list}
                     renderItem={(item, index) => (

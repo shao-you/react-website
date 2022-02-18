@@ -4,6 +4,7 @@ import Header from './common/header'
 import store from './store'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home'
+import About from './pages/about'
 import Demo from './pages/demo'
 import Blog from './pages/blog'
 import Taiwan from './pages/taiwan'
@@ -17,6 +18,7 @@ class App extends Component {
             <Header/>  
             <Routes>
               <Route exact path='/' element = {<Home/>}></Route>
+              <Route exact path='/about' element = {<About/>}></Route>
               <Route exact path='/demo' element = {<Demo/>}></Route>
               <Route exact path='/demo/:id' element = {<Demo/>}></Route>
               <Route exact path='/blog' element = {<Blog/>}></Route>

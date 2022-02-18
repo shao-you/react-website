@@ -6,15 +6,19 @@ const defaultState = fromJS({
     mouseIn: false,
     list: [],
     page: 1,
-    totalPage: 1
+    totalPage: 1,
+    barBtnClick: false
 })
 
 // reducer cannot directly change the state but return the updated state in a new object
 // reducer is a pure function
-export default (state = defaultState, action) => {
+const reducer = (state = defaultState, action) => {
     switch(action.type) {
+        case constants.CLICK_BAR_BTN:
+            // console.log('click menu icon:', !state.get('barBtnClick'))
+            return state.set('barBtnClick', !state.get('barBtnClick')) // actually, it will return a new object
         case constants.SEARCH_FOCUS:
-            return state.set('focused', true) // actually, it will return a new object
+            return state.set('focused', true)
         case constants.SEARCH_BLUR:
             return state.set('focused', false)
         case constants.CHANGE_HOT_LIST:
@@ -33,3 +37,5 @@ export default (state = defaultState, action) => {
             return state
     }
 }
+
+export default reducer

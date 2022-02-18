@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Topic from './components/Topic'
-import Recommend from './components/Recommend'
 import Clock from './components/Clock'
 import List from './components/List'
 import {
@@ -21,14 +20,13 @@ class Home extends Component {
             <HomeWrapper>
                 <HomeLeft>
                     <img className='banner-img' alt='Taipei 101' src='https://www.bakermckenzie.com/-/media/images/locations/taiwan_header_new.jpg'/>
-                    <a href='https://github.com/shao-you/' target="_blank">Click<GithubItem/></a>
-                    <a href='https://www.facebook.com/shaoyou.wu/' target="_blank">Click<FBItem/></a>
-                    <a href='https://www.linkedin.com/in/shaoyou/' target="_blank">Click<LinkedInItem/></a>
+                    <a href='https://github.com/shao-you/' target="_blank" rel="noreferrer noopener">Click<GithubItem/></a>
+                    <a href='https://www.facebook.com/shaoyou.wu/' target="_blank" rel="noreferrer noopener">Click<FBItem/></a>
+                    <a href='https://www.linkedin.com/in/shaoyou/' target="_blank" rel="noreferrer noopener">Click<LinkedInItem/></a>
                     <Topic></Topic>
                     <List></List>
                 </HomeLeft>
                 <HomeRight>
-                    {/* <Recommend></Recommend> */}
                     <Clock></Clock>
                 </HomeRight>
                 {

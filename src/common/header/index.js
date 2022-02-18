@@ -1,18 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { connect } from 'react-redux'
-import { ImQuill, ImSpinner9 } from 'react-icons/im'
+import { ImSpinner9 } from 'react-icons/im'
 import { GrFormSearch } from 'react-icons/gr'
 import { actionCreators } from './store'
 import { actionCreators as loginActionCreators } from '../../pages/login/store'
 import { Link, Navigate } from 'react-router-dom'
 import {
     HeadeWrapper,
-    Nav,
+    NavLink,
     NavItem,
     NavSearch,
-    Addition,
-    Button,
     SearchWrapper,
     SearchInfo,
     SearchInfoTitle,
@@ -60,119 +58,68 @@ const getListArea = (props) => {
 // stateless function component
 const Header = (props) => {
     const nodeRef = React.useRef(null) // to fix warning
+    // useEffect(() => {
+    //     window.addEventListener('click', props.handleBarBtn)
+    //     console.log('add click listener')
+    //     return () => {
+    //         window.removeEventListener('click', props.handleBarBtn)
+    //         console.log('remove click listener')
+    //     }
+    //   }, [])
+
+    const classTypeCal = () => {
+        if (props.barBtnClick) return 'barClick'
+        else return ''
+    }
+    let classType = classTypeCal()
+
     return (
-        <HeadeWrapper>
-            <Nav>
-                <Link to='/'>
-                    <NavItem className='left active'>Home</NavItem>
-                </Link>
-                <Link to='/demo'>
-                    <NavItem className='left'>Demo</NavItem>
-                </Link>
-                <Link to='/blog'>
-                    <NavItem className='left'>Blog</NavItem>
-                </Link>
-                <Link to='/taiwan'>
-                    <NavItem className='left'>Taiwan</NavItem>
-                </Link>
-                {
-                    props.loginState ? 
-                    <NavItem onClick={props.logout} className='right'>Logout</NavItem> : 
-                    <Link to='/login'><NavItem className='right'>Login</NavItem></Link>
-                }
-                {/* {<Navigate to='/login'/>} */}
-                <SearchWrapper>
-                    <CSSTransition 
-                        nodeRef={nodeRef} // to fix warning
-                        in={props.focused}
-                        timeout={200}
-                        classNames="slide">
-                        <NavSearch 
-                            className={(props.focused || props.mouseIn) ? 'focused' : ''}
-                            onFocus={() => props.handleInputFocus(props.list)}
-                            onBlur={props.handleInputBlur}>
-                        </NavSearch>
-                    </CSSTransition>
-                    <GrFormSearch className={(props.focused || props.mouseIn) ? 'icon focused' : 'icon'}/>
-                    {getListArea(props)}
-                </SearchWrapper>
-            </Nav>
-            {/* <Addition>
-                <Button className='writting'>
-                    <ImQuill/>
-                    Article
-                </Button>
-                <Button className='reg'>Register</Button>
-            </Addition> */}
+        <HeadeWrapper className={classType}>
+            <NavLink to='/'>
+                <NavItem className={'active ' + classType}>Home</NavItem>
+            </NavLink>
+            <NavLink to='/'>
+                <NavItem className={classType} onClick={props.handleBarBtn}>Home</NavItem>
+            </NavLink>
+            <NavLink to='/about'>
+                <NavItem className={classType} onClick={props.handleBarBtn}>About</NavItem>
+            </NavLink>
+            <NavLink to='/demo'>
+                <NavItem className={classType} onClick={props.handleBarBtn}>Demo</NavItem>
+            </NavLink>
+            <NavLink to='/blog'>
+                <NavItem className={classType} onClick={props.handleBarBtn}>Blog</NavItem>
+            </NavLink>
+            <NavLink to='/taiwan'>
+                <NavItem className={classType} onClick={props.handleBarBtn}>Taiwan</NavItem>
+            </NavLink>
+            {
+                props.loginState ? 
+                <NavItem onClick={props.logout} className='right'>Logout</NavItem> : 
+                <Link to='/login'><NavItem className='right'>Login</NavItem></Link>
+            }
+            {/* {<Navigate to='/login'/>} */}
+            <NavItem className={props.barBtnClick ? 'icon barClick' : 'icon'} onClick={props.handleBarBtn}>
+                <i className="fa fa-bars"></i>
+            </NavItem>
+            <SearchWrapper className={classType}>
+                <CSSTransition 
+                    nodeRef={nodeRef} // to fix warning
+                    in={props.focused}
+                    timeout={200}
+                    classNames="slide">
+                    <NavSearch 
+                        className={(props.focused || props.mouseIn) ? 'focused' : ''}
+                        onFocus={() => props.handleInputFocus(props.list)}
+                        onBlur={props.handleInputBlur}>
+                    </NavSearch>
+                </CSSTransition>
+                <GrFormSearch className={(props.focused || props.mouseIn) ? 'icon focused' : 'icon'}/>
+                {getListArea(props)}
+            </SearchWrapper>
         </HeadeWrapper>
     )
 }
-
-// stateful class component
-// class Header extends Component {
-//     render() {
-//         const { focused, handleInputFocus, handleInputBlur } = this.props
-//         return (
-//             <HeadeWrapper>
-//             <Logo/>
-//             <Nav>
-//                 <NavItem className='left active'>Home</NavItem>
-//                 <NavItem className='left'>Download</NavItem>
-//                 <NavItem className='right'>Login</NavItem>
-//                 <NavItem className='right'>
-//                     <RiFontSize/>
-//                 </NavItem>
-//                 <SearchWrapper>
-//                     <CSSTransition 
-//                         in={focused}
-//                         timeout={200}
-//                         classNames="slide">
-//                         <NavSearch 
-//                             className={focused ? 'focused' : ''}
-//                             onFocus={handleInputFocus}
-//                             onBlur={handleInputBlur}>
-//                         </NavSearch>
-//                     </CSSTransition>
-//                     <GrFormSearch className={focused ? 'icon focused' : 'icon'}/>
-//                     {this.getListArea()}
-//                 </SearchWrapper>
-//             </Nav>
-//             <Addition>
-//                 <Button className='writting'>
-//                     <ImQuill/>
-//                     Article
-//                 </Button>
-//                 <Button className='reg'>Register</Button>
-//             </Addition>
-//             </HeadeWrapper>
-//         )
-//     }
-
-//     getListArea = () => {
-//         const { focused } = this.props
-//         if (focused) {
-//             return (
-//                 <SearchInfo>
-//                     <SearchInfoTitle>
-//                         Hot
-//                         <SearchInfoChange>
-//                             Change Hot
-//                         </SearchInfoChange>
-//                     </SearchInfoTitle>
-//                     <SearchInfoList>
-//                         {
-//                             this.props.list.map((item) => {
-//                                 return <SearchInfoItem key={item}>{item}</SearchInfoItem>
-//                             })
-//                         }
-//                     </SearchInfoList>
-//                 </SearchInfo>
-//             )
-//         } else {
-//             return null
-//         }
-//     }
-// }
 
 const mapStateToProps = (state) => { // map state from store
     return {
@@ -182,6 +129,7 @@ const mapStateToProps = (state) => { // map state from store
         page: state.get('header').get('page'),
         totalPage: state.get('header').get('totalPage'),
         mouseIn: state.get('header').get('mouseIn'),
+        barBtnClick: state.get('header').get('barBtnClick'),
         loginState: state.get('login').get('loginState')
     }
 }
@@ -212,6 +160,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         logout() {
             dispatch(loginActionCreators.logout())
+        },
+        handleBarBtn() {
+            dispatch(actionCreators.clickBarBtn())
         }
     }
 }

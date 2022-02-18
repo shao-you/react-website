@@ -19,28 +19,32 @@ class Clock extends Component {
                 time: new Date()
             })
         }, 1000)
-    }
-
+    }        
     componentWillUnmount() {
         clearInterval(this.timerId);
     }
-
+    handleDeg = () => {
+        this.sDeg = this.state.time.getSeconds() * 6
+        this.mDeg = (this.state.time.getMinutes() + this.sDeg/360) * 6
+        this.hDeg = (this.state.time.getHours() + this.mDeg/360) * 30
+    }
     render() {
         return (
             <ClockItem>
+                {this.handleDeg()}
                 <ClockHand className="hour_hand"
                     style={{
-                    transform: `rotateZ(${this.state.time.getHours() * 30}deg)` // "rotateZ(90deg)"
+                    transform: `rotateZ(${this.hDeg}deg)` // "rotateZ(90deg)"
                     }}
                 />
                 <ClockHand className="min_hand"
                     style={{
-                    transform: `rotateZ(${this.state.time.getMinutes() * 6}deg)`
+                    transform: `rotateZ(${this.mDeg}deg)`
                     }}
                 />
                 <ClockHand className="sec_hand"
                     style={{
-                    transform: `rotateZ(${this.state.time.getSeconds() * 6}deg)`
+                    transform: `rotateZ(${this.sDeg}deg)`
                     }}
                 />
                 <ClockNum className="one">1</ClockNum>

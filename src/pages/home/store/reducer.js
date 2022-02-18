@@ -32,7 +32,7 @@ const defaultState = fromJS({
 
 // reducer cannot directly change the state but return the updated state in a new object
 // reducer is a pure function
-export default (state = defaultState, action) => {
+const reducer = (state = defaultState, action) => {
     switch(action.type) {
         case constants.TOGGLE_SCROLL_SHOW:
             return state.set('showCroll', action.show)
@@ -40,3 +40,5 @@ export default (state = defaultState, action) => {
             return state
     }
 }
+
+export default reducer

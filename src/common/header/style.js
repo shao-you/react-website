@@ -1,10 +1,12 @@
 import styled from 'styled-components'
+import { NavLink as Link } from 'react-router-dom'
 
 export const HeadeWrapper = styled.div`
     position: relative;
     margin: 0;
+    background: #4D4D4D;
     height: 46px;
-    border-bottom: 1px solid #f0f0f0;
+    z-index: 999;
     @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 `
 export const Logo = styled.a.attrs({
@@ -21,13 +23,24 @@ export const Logo = styled.a.attrs({
     background-position: center;
     background-size: contain;
 `
-export const Nav = styled.div`
-    height: 46px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    background: #4D4D4D;
+export const NavLink = styled(Link)`
+    // height: 46px;
+    // box-sizing: border-box;
+    // margin: 0 auto;
+    // background: #4D4D4D;
 `
 export const NavItem = styled.div`
+    @media screen and (max-width: 650px) {
+        :not(.active) {display: none;}
+        // display: none;
+        &.barClick {
+            float: none;
+            display: block;
+            text-align: left;
+            background: #4D4D4D;
+        }
+    }
+    float: left;
     display: block;
     text-align: center;
     line-height: 46px;
@@ -37,24 +50,41 @@ export const NavItem = styled.div`
     color: #ebe9eb;
     cursor: pointer;
     text-decoration: none;
-    border-right: 1px solid #666;
     :hover {
-        background-color: #000000;
-    }
-    &.left {
-        float: left;
-    }
-    &.right {
-        float: right;
+        background: #000000;
     }
     &.active {
-        //color: #999;
+        display: none;
+        background: #000000;
+        @media screen and (max-width: 650px) {
+            display: block;
+            &.barClick {
+                display: none;
+            }
+        }
     }
+    &.icon {
+        @media screen and (max-width: 650px) {
+            float: right;
+            display: block;
+            &.barClick {
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: #000000;
+            }
+        }
+        display: none;
+      }
 `
 export const SearchWrapper = styled.div`
     position: relative;
-    //margin-right: 40px;
     float: right;
+    @media screen and (max-width: 650px) {
+        &.barClick {
+            display: none;
+        }
+    }
     .icon {
         position: absolute;
         right: 12px;
@@ -103,7 +133,6 @@ export const NavSearch = styled.input.attrs({
 `
 export const SearchInfo = styled.div`
     position: absolute;
-    //left: 10px;
     z-index: 3;
     top: 42px;
     width 240px;
@@ -145,27 +174,4 @@ export const SearchInfoItem = styled.a`
 `
 export const SearchInfoList = styled.div`
     overflow: hidden;
-`
-export const Addition = styled.div`
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 56px;
-`
-export const Button = styled.div`
-    float: right;
-    margin-top: 9px;
-    margin-right: 20px;
-    padding: 0 20px;
-    line-height: 38px;
-    border-radius: 19px;
-    border: 1px solid #ec6149;
-    font-size: 14px;
-    &.reg {
-        color: #ec6149;
-    }
-    &.writting {
-        color: #fff;
-        background: #ec6149;
-    }
 `
