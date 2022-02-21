@@ -30,13 +30,13 @@ class TodoList extends Component {
                     <Input 
                         value={inputValue} 
                         placeholder='ToDo List' 
-                        style={{width: '300px', marginRight: '5px'}}
+                        style={{width: '75vw', maxWidth: '300px', marginRight: '5px'}}
                         onChange={handleInputChange}
                     />
                     <Button type="primary" onClick={handleBtnClick}>Add</Button>
                 </div>
                 <List 
-                    style={{marginTop: '10px', width: '300px', background: 'white'}}
+                    style={{marginTop: '10px', width: '75vw', maxWidth: '300px', background: 'white'}}
                     bordered
                     dataSource={list}
                     renderItem={(item, index) => (

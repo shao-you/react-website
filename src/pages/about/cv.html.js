@@ -28,7 +28,7 @@ module.exports = `<!DOCTYPE html>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
-		<a href="#" target="_blank" rel="noreferrer noopener">
+		<a href="/statics/cv/CV_Brian_Wu.pdf" target="_blank" rel="noreferrer noopener">
 		<button class="btn"><i class="fa fa-download"></i> Download CV</button></a>
 
 			<ul>

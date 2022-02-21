@@ -10,6 +10,9 @@ export const GithubItem = styled(Github)`
     cursor: pointer;
     width: 46px;    
     height: 46px;
+    :hover {
+        color: blue;
+    }
 `
 export const FBItem = styled(FacebookCircle)`
     color: #4D4D4D;
@@ -18,6 +21,9 @@ export const FBItem = styled(FacebookCircle)`
     cursor: pointer;
     width: 46px;    
     height: 46px;
+    :hover {
+        color: blue;
+    }
 `
 export const LinkedInItem = styled(LinkedinSquare)`
     color: #4D4D4D;
@@ -26,33 +32,40 @@ export const LinkedInItem = styled(LinkedinSquare)`
     cursor: pointer;
     width: 46px;    
     height: 46px;
+    :hover {
+        color: blue;
+    }
 `
 export const HomeWrapper = styled.div`
     // overflow: hidden;
     width: 100%;
-    margin: 0 auto;
+    margin: 5px auto;
     background: #f7f7f7;
+    .banner-img {
+        width: 97%;
+        display: block;
+        margin: 5px auto;
+    }
 `
 export const HomeLeft = styled.div`
     float: left;
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 90vw;
-    .banner-img {
-        width: 90vw;
-    }
+    margin: 10px 5px 10px 10px;
+    width: 60vw;
 `
 export const HomeRight = styled.div`
     float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-    //width: 240px;
+    margin: 10px 10px 10px 5px;
+    width: 30vw;
+`
+export const HomeCenter = styled.div`
+    float: none;
+    margin: 10px;
 `
 export const TopicWrapper = styled.div`
     overflow: hidden;
     padding: 20px 0 10px 0;
     margin-left: -18px;
-    border-bottom: 1px solid #dcdcdc;
+    // border-bottom: 1px solid #dcdcdc;
 `
 export const TopicItem = styled.div`
     float: left;
@@ -77,11 +90,12 @@ export const TopicItem = styled.div`
 export const BackTop = styled.div`
     position: fixed;
     right: 20px;
-    bottom: 50px;
+    bottom: 38px;
     padding: 5px;
     line-height: 25px;
     text-align: center;
     border: 1px solid #ccc;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
+    background: #f7f7f7;
 `

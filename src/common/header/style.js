@@ -34,9 +34,10 @@ export const NavItem = styled.div`
     display: block;
     text-align: center;
     line-height: 46px;
-    padding: 0 15px;
+    // width: 66px;
+    padding: 0 12px;
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: 530;
+    font-weight: 550;
     color: #ebe9eb;
     cursor: pointer;
     text-decoration: none;
@@ -114,13 +115,13 @@ export const NavSearch = styled.input.attrs({
         color: #999;
     }
     &.focused {
-        width: 240px;
+        width: 210px;
     }
     &.slide-enter {
         transition: all .2s ease-out;
     }
     &.slide-enter-active {
-        width: 240px;
+        width: 210px;
     }
     &.slide-exit {
         transition: all .2s ease-out;
@@ -133,7 +134,7 @@ export const SearchInfo = styled.div`
     position: absolute;
     z-index: 3;
     top: 42px;
-    width 240px;
+    width 210px;
     margin: 8px;
     padding: 0 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, .2);

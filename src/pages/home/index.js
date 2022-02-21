@@ -6,6 +6,7 @@ import {
     HomeWrapper,
     HomeLeft,
     HomeRight,
+    HomeCenter,
     BackTop,
     GithubItem,
     FBItem,
@@ -13,31 +14,39 @@ import {
 } from './style'
 import { connect } from 'react-redux'
 import { actionCreators } from './store'
+import { Typography, Divider } from 'antd';
+
+const { Title, Paragraph, Text, Link } = Typography;
 
 class Home extends Component {
     render() {
         return (
             <HomeWrapper>
-                <div style={{margin: '10px', display:'block', float: 'left', width: '60vw'}}>
-                    <p>
-                        I built this website from ZERO to record my learning journey of React/HTML/CSS/JavaScript.<br/>
-                        I tried to adopt important skills and libraries to achieve that.
-                    </p><br/>
+                <HomeLeft>
+                    <Typography>
+                        {/* <Title>Introduction</Title> */}
+                        <Paragraph>
+                            I started to learned React from 22/01/2022, and I was almost ZERO about website development.
+                            I built this website to record my learning journey of React/HTML/CSS/JavaScript.
+                            I tried to adopt important skills and libraries to achieve that.
+                        </Paragraph>
+                    </Typography>
                     <h1>Skill</h1>
                     <ul>
                         <li>Redux</li>
                         <li>Redux-thunk</li>
-                        <li>react-router</li>
+                        <li>React Router</li>
                         <li>Hook</li>
                         <li>styled-components</li>
                         <li>redux-immutable</li>
                         <li>react-transition-group</li>
                         <li>propTypes & defaultProps</li>
-                        <li>react-icons</li>
-                        <li>JSON server</li>
-                        <li>CSS reset</li>
                         <li>Axios</li>
+                        <li>JSON server</li>
+                        <li>CSS Flex</li>
+                        <li>CSS reset</li>
                         <li>Antd</li>
+                        <li>react-icons</li>
                     </ul><br/>
                     <h1>Function</h1>
                     <ul>
@@ -48,19 +57,18 @@ class Home extends Component {
                         <li>ToDo list</li>
                         <li>BackTop</li>
                     </ul>
-                </div>
-                <Clock></Clock>
-                <HomeLeft>
-                    <img className='banner-img' alt='Taipei 101' src='/statics/taiwan/buildings-3973014_1280.jpg'/><br/>
-                    <a href='https://github.com/shao-you/' target="_blank" rel="noreferrer noopener">Click<GithubItem/></a>
-                    <a href='https://www.facebook.com/shaoyou.wu/' target="_blank" rel="noreferrer noopener">Click<FBItem/></a>
-                    <a href='https://www.linkedin.com/in/shaoyou/' target="_blank" rel="noreferrer noopener">Click<LinkedInItem/></a>
-                    <Topic></Topic>
-                    <List></List>
                 </HomeLeft>
                 <HomeRight>
-                    
+                    <Clock></Clock>
                 </HomeRight>
+                <HomeCenter>
+                    <img className='banner-img' alt='Taipei 101' src='/statics/taiwan/buildings-3973014_1280.jpg'/><br/>
+                    <a href='https://github.com/shao-you/' target="_blank" rel="noreferrer noopener"><GithubItem/></a>
+                    <a href='https://www.facebook.com/shaoyou.wu/' target="_blank" rel="noreferrer noopener"><FBItem/></a>
+                    <a href='https://www.linkedin.com/in/shaoyou/' target="_blank" rel="noreferrer noopener"><LinkedInItem/></a>
+                    <Topic></Topic>
+                    {/* <List></List> */}
+                </HomeCenter>
                 {
                     this.props.showCroll ? <BackTop onClick={this.handleScrollTop}>Top</BackTop> : null
                 }

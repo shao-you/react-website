@@ -7,8 +7,8 @@ export const ClockFont = styled.div`
 export const ClockItem = styled.div`
     position: relative;
     float: right;
-    margin-right: 10px;
-    margin-top: 10px;
+    // margin-right: 10px;
+    // margin-top: 10px;
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
@@ -19,8 +19,8 @@ export const ClockItem = styled.div`
     ::after {
         background: #aaa;
         content: "";
-        width: 2vw;
-        height: 2vw;
+        width: 1.5vw;
+        height: 1.5vw;
         border-radius: 50%;
         position: absolute;
         z-index: 2;
@@ -36,8 +36,8 @@ export const ClockHand = styled.div`
     transform-origin: bottom;
     &.hour_hand {
         width: 1.8%;
-        height: 25%;
-        top: 25%;
+        height: 24%;
+        top: 26%;
         left: 48.85%;
         opacity: 0.8;
         background: black;

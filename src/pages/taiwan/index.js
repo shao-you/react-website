@@ -12,9 +12,6 @@ class Taiwan extends Component {
                 <img src='/statics/taiwan/istockphoto-604373174-170667a.jpg' alt='tw1'/>
                 </PicItem>
                 <PicItem>
-                <img src='/statics/taiwan/istockphoto-896926984-170667a.jpg' alt='tw1'/>
-                </PicItem>
-                <PicItem>
                 <img src='/statics/taiwan/night-market-1714683__340.jpg' alt='tw1'/>
                 </PicItem>
                 <PicItem>
