@@ -5,19 +5,22 @@ export const ClockFont = styled.div`
     @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 `
 export const ClockItem = styled.div`
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
     position: relative;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
-    font-size: 24px;
+    font-size: 2.5vw;
     color: #444;
     text-align: center;
     ::after {
         background: #aaa;
         content: "";
-        width: 12px;
-        height: 12px;
+        width: 2vw;
+        height: 2vw;
         border-radius: 50%;
         position: absolute;
         z-index: 2;
@@ -28,32 +31,32 @@ export const ClockItem = styled.div`
     }
 `
 export const ClockHand = styled.div`
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: bottom;
     &.hour_hand {
-        position: absolute;
-        width: 6px;
-        height: 60px;
-        background: #222;
-        top: 30%;
-        left: 49%;
-        transform-origin: bottom;
+        width: 1.8%;
+        height: 25%;
+        top: 25%;
+        left: 48.85%;
+        opacity: 0.8;
+        background: black;
     }
     &.min_hand {
-        position: absolute;
-        width: 4px;
-        height: 80px;
-        background: #444;
-        top: 23%;
+        width: 1.6%;
+        height: 30%;
+        top: 19%;
         left: 49.5%;
-        transform-origin: bottom;
+        opacity: 0.8;
+        background: black;
     }
     &.sec_hand {
-        position: absolute;
-        width: 2px;
-        height: 118px;
+        width: 1%;
+        height: 40%;
+        top: 10%;
+        left: 49.25%;
+        opacity: 0.8;
         background: red;
-        top: 10.5%;
-        left: 49.5%;
-        transform-origin: bottom;
     }
 `
 export const ClockNum = styled.span`
@@ -69,31 +72,31 @@ export const ClockNum = styled.span`
         right: 10%;
     }
     &.three {
-        right: 10px;
+        right: 5%;
         top: 46%;
     }
     &.four {
-        right: 30px;
+        right: 13%;
         top: 67%;
     }
     &.five {
-        right: 78px;
-        top: 80%;
+        right: 27%;
+        top: 84%;
     }
     &.six {
-        bottom: 10px;
-        left: 50%;
+        bottom: 2%;
+        left: 48%;
     }
     &.seven {
-        left: 80px;
+        left: 27%;
         top: 82%;
     }
     &.eight {
-        left: 30px;
+        left: 14%;
         top: 67%;
     }
     &.nine {
-        left: 10px;
+        left: 6%;
         top: 46%;
     }
     &.ten {
@@ -101,11 +104,11 @@ export const ClockNum = styled.span`
         left: 10%;
     }
     &.eleven {
-        top: 10%;
-        left: 26%;
+        top: 9%;
+        left: 25%;
     }
     &.twelve {
-        top: 10px;
+        top: 2%;
         left: 46%;
     }
 `

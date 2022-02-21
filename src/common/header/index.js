@@ -5,7 +5,7 @@ import { ImSpinner9 } from 'react-icons/im'
 import { GrFormSearch } from 'react-icons/gr'
 import { actionCreators } from './store'
 import { actionCreators as loginActionCreators } from '../../pages/login/store'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import {
     HeadeWrapper,
     NavLink,
@@ -57,6 +57,9 @@ const getListArea = (props) => {
 
 // stateless function component
 const Header = (props) => {
+    const { focused, mouseIn, list, barBtnClick, loginState,
+        handleBarBtn, logout, handleInputFocus, handleInputBlur } = props
+
     const nodeRef = React.useRef(null) // to fix warning
     // useEffect(() => {
     //     window.addEventListener('click', props.handleBarBtn)
@@ -68,7 +71,7 @@ const Header = (props) => {
     //   }, [])
 
     const classTypeCal = () => {
-        if (props.barBtnClick) return 'barClick'
+        if (barBtnClick) return 'barClick'
         else return ''
     }
     let classType = classTypeCal()
@@ -77,44 +80,41 @@ const Header = (props) => {
         <HeadeWrapper className={classType}>
             <NavLink to='/'>
                 <NavItem className={'active ' + classType}>Home</NavItem>
-            </NavLink>
-            <NavLink to='/'>
-                <NavItem className={classType} onClick={props.handleBarBtn}>Home</NavItem>
+                <NavItem className={classType} onClick={handleBarBtn}>Home</NavItem>
             </NavLink>
             <NavLink to='/about'>
-                <NavItem className={classType} onClick={props.handleBarBtn}>About</NavItem>
+                <NavItem className={classType} onClick={handleBarBtn}>About</NavItem>
             </NavLink>
             <NavLink to='/demo'>
-                <NavItem className={classType} onClick={props.handleBarBtn}>Demo</NavItem>
-            </NavLink>
-            <NavLink to='/blog'>
-                <NavItem className={classType} onClick={props.handleBarBtn}>Blog</NavItem>
+                <NavItem className={classType} onClick={handleBarBtn}>Demo</NavItem>
             </NavLink>
             <NavLink to='/taiwan'>
-                <NavItem className={classType} onClick={props.handleBarBtn}>Taiwan</NavItem>
+                <NavItem className={classType} onClick={handleBarBtn}>Taiwan</NavItem>
+            </NavLink>
+            <NavLink to='/blog'>
+                <NavItem className={classType} onClick={handleBarBtn}>Blog</NavItem>
             </NavLink>
             {
-                props.loginState ? 
-                <NavItem onClick={props.logout} className='right'>Logout</NavItem> : 
-                <Link to='/login'><NavItem className='right'>Login</NavItem></Link>
+                loginState ? 
+                <Link to='/'><NavItem className={classType} onClick={() => {logout();handleBarBtn();}}>Logout</NavItem></Link> : 
+                <Link to='/login'><NavItem className={classType} onClick={handleBarBtn}>Login</NavItem></Link>
             }
-            {/* {<Navigate to='/login'/>} */}
-            <NavItem className={props.barBtnClick ? 'icon barClick' : 'icon'} onClick={props.handleBarBtn}>
+            <NavItem className={'icon ' + classType} onClick={handleBarBtn}>
                 <i className="fa fa-bars"></i>
             </NavItem>
             <SearchWrapper className={classType}>
                 <CSSTransition 
                     nodeRef={nodeRef} // to fix warning
-                    in={props.focused}
+                    in={focused}
                     timeout={200}
                     classNames="slide">
                     <NavSearch 
-                        className={(props.focused || props.mouseIn) ? 'focused' : ''}
-                        onFocus={() => props.handleInputFocus(props.list)}
-                        onBlur={props.handleInputBlur}>
+                        className={(focused || mouseIn) ? 'focused' : ''}
+                        onFocus={() => handleInputFocus(list)}
+                        onBlur={handleInputBlur}>
                     </NavSearch>
                 </CSSTransition>
-                <GrFormSearch className={(props.focused || props.mouseIn) ? 'icon focused' : 'icon'}/>
+                <GrFormSearch className={(focused || mouseIn) ? 'icon focused' : 'icon'}/>
                 {getListArea(props)}
             </SearchWrapper>
         </HeadeWrapper>

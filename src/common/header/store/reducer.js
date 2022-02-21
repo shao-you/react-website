@@ -15,6 +15,7 @@ const defaultState = fromJS({
 const reducer = (state = defaultState, action) => {
     switch(action.type) {
         case constants.CLICK_BAR_BTN:
+            if (window.innerWidth > 650) return state.set('barBtnClick', false) // always reset while rsp navi not needed
             // console.log('click menu icon:', !state.get('barBtnClick'))
             return state.set('barBtnClick', !state.get('barBtnClick')) // actually, it will return a new object
         case constants.SEARCH_FOCUS:

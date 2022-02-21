@@ -25,12 +25,13 @@ export const initListAction = (data) => ({
 // return an action "function" (redux-thunk)
 export const getTodoList = (id) => {
     return (dispatch) => {
-        // console.log(id);
         axios.get('/api/test.json?id=' + id).then((res) => {
-            // console.log(res);    
+            // console.log(res)
             const data = res.data
             const action = initListAction(data.react)
             dispatch(action)
+        }).catch(() => {
+            console.log('error')
         })
     }
 }

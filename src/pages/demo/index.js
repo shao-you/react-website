@@ -9,7 +9,7 @@ const Demo = () => {
     const { id } = useParams() // React Hooks "useParams" must be called in a React function component 
     // console.log(id)
     return (
-        <TodoList id={id}/> // id is url parameter
+        <TodoList urlPara={id}/> // id is url parameter, type string
     )
 }
 const mapStateToProps = (state) => {

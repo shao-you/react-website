@@ -30,16 +30,6 @@ export const NavLink = styled(Link)`
     // background: #4D4D4D;
 `
 export const NavItem = styled.div`
-    @media screen and (max-width: 650px) {
-        :not(.active) {display: none;}
-        // display: none;
-        &.barClick {
-            float: none;
-            display: block;
-            text-align: left;
-            background: #4D4D4D;
-        }
-    }
     float: left;
     display: block;
     text-align: center;
@@ -50,8 +40,14 @@ export const NavItem = styled.div`
     color: #ebe9eb;
     cursor: pointer;
     text-decoration: none;
-    :hover {
-        background: #000000;
+    @media screen and (max-width: 650px) {
+        :not(.active) {display: none;}
+        &.barClick {
+            float: none;
+            display: block;
+            text-align: left;
+            background: #4D4D4D;
+        }
     }
     &.active {
         display: none;
@@ -64,6 +60,7 @@ export const NavItem = styled.div`
         }
     }
     &.icon {
+        display: none;
         @media screen and (max-width: 650px) {
             float: right;
             display: block;
@@ -74,8 +71,10 @@ export const NavItem = styled.div`
                 background: #000000;
             }
         }
-        display: none;
-      }
+    }
+    :hover {
+        background: #000000;
+    }
 `
 export const SearchWrapper = styled.div`
     position: relative;
@@ -89,7 +88,6 @@ export const SearchWrapper = styled.div`
         position: absolute;
         right: 12px;
         bottom: 12px;
-        //top: 10px;
         width: 23px;
         height: 23px;
         border-radius: 15px;

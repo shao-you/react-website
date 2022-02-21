@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import { actionCreators } from './store'
 import { Input, Button, List } from 'antd'
 import PropTypes from 'prop-types'
-import { fromJS } from 'immutable' 
 import store from '../../store'
 
 class TodoList extends Component {
@@ -21,7 +20,9 @@ class TodoList extends Component {
     //         return false
     //     }
     // }
+
     render() {
+        // console.log(this.props)
         const { inputValue, list, handleInputChange, handleBtnClick, handleItemDelete } = this.props
         return (
             <div style={{margin: '7px', float: 'left'}}>
@@ -32,15 +33,18 @@ class TodoList extends Component {
                         style={{width: '300px', marginRight: '5px'}}
                         onChange={handleInputChange}
                     />
-                    <Button type="primary" onClick={handleBtnClick}>Submit</Button>
+                    <Button type="primary" onClick={handleBtnClick}>Add</Button>
                 </div>
                 <List 
                     style={{marginTop: '10px', width: '300px', background: 'white'}}
                     bordered
                     dataSource={list}
                     renderItem={(item, index) => (
-                        <List.Item onClick={() => {handleItemDelete(index)}}> 
-                            {/* onClick registered an "arrow function" */}
+                        <List.Item extra={<Button 
+                                            type="primary" 
+                                            danger size={'small'} 
+                                            onClick={() => {handleItemDelete(index)}}>Del{/* onClick registered an "arrow function" */}
+                                         </Button>}>
                             {item}
                         </List.Item>
                     )}
@@ -49,21 +53,22 @@ class TodoList extends Component {
         )
     }
     componentDidMount() {
-        this.props.handleStoreChange(this.props.id)
+        this.props.handleStoreChange(this.props.urlPara)
     }
 }
 
-// TodoList.propTypes = fromJS({
-//     inputValue: PropTypes.string,
-//     handleInputChange: PropTypes.func.isRequired,
-//     handleBtnClick: PropTypes.func,
-//     list: PropTypes.array,
-//     handleItemDelete: PropTypes.func
-// })
-// TodoList.defaultProps = {
-//     inputValue: 'xxx',
-//     list: ['55', '66']
-// }
+TodoList.propTypes = {
+    inputValue: PropTypes.string.isRequired,
+    list: PropTypes.object.isRequired,
+    urlPara: PropTypes.string,
+    handleStoreChange: PropTypes.func.isRequired,
+    handleInputChange: PropTypes.func.isRequired,
+    handleBtnClick: PropTypes.func.isRequired,
+    handleItemDelete: PropTypes.func.isRequired
+}
+TodoList.defaultProps = {
+    urlPara: '0'
+}
 
 const mapState = (state) => {
     return {
@@ -73,8 +78,8 @@ const mapState = (state) => {
 }
 const mapDispatch = (dispatch) => {
     return {
-        handleStoreChange(id) {
-            dispatch(actionCreators.getTodoList(id))
+        handleStoreChange(urlPara) {
+            dispatch(actionCreators.getTodoList(urlPara))
         },
         handleInputChange(e) {
             dispatch(actionCreators.getInputChangeAction(e.target.value))

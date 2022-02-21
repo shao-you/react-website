@@ -28,8 +28,8 @@ export const LinkedInItem = styled(LinkedinSquare)`
     height: 46px;
 `
 export const HomeWrapper = styled.div`
-    overflow: hidden;
-    //width: 960px;
+    // overflow: hidden;
+    width: 100%;
     margin: 0 auto;
     background: #f7f7f7;
 `
@@ -37,17 +37,16 @@ export const HomeLeft = styled.div`
     float: left;
     margin-left: 10px;
     margin-top: 10px;
-    width: 625px;
+    width: 90vw;
     .banner-img {
-        width: 625px;
-        height: 240px;
+        width: 90vw;
     }
 `
 export const HomeRight = styled.div`
-    //width: 240px;
     float: right;
     margin-right: 10px;
     margin-top: 10px;
+    //width: 240px;
 `
 export const TopicWrapper = styled.div`
     overflow: hidden;
@@ -78,13 +77,11 @@ export const TopicItem = styled.div`
 export const BackTop = styled.div`
     position: fixed;
     right: 20px;
-    //top: 100px;
     bottom: 50px;
-    width: 25px;
-    height: 25px;
     padding: 5px;
     line-height: 25px;
     text-align: center;
     border: 1px solid #ccc;
     font-size: 14px;
+    cursor: pointer;
 `

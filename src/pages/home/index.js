@@ -18,8 +18,40 @@ class Home extends Component {
     render() {
         return (
             <HomeWrapper>
+                <div style={{margin: '10px', display:'block', float: 'left', width: '60vw'}}>
+                    <p>
+                        I built this website from ZERO to record my learning journey of React/HTML/CSS/JavaScript.<br/>
+                        I tried to adopt important skills and libraries to achieve that.
+                    </p><br/>
+                    <h1>Skill</h1>
+                    <ul>
+                        <li>Redux</li>
+                        <li>Redux-thunk</li>
+                        <li>react-router</li>
+                        <li>Hook</li>
+                        <li>styled-components</li>
+                        <li>redux-immutable</li>
+                        <li>react-transition-group</li>
+                        <li>propTypes & defaultProps</li>
+                        <li>react-icons</li>
+                        <li>JSON server</li>
+                        <li>CSS reset</li>
+                        <li>Axios</li>
+                        <li>Antd</li>
+                    </ul><br/>
+                    <h1>Function</h1>
+                    <ul>
+                        <li>Analog clock</li>
+                        <li>Search & Trending list</li>
+                        <li>Responsicve navi bar</li>
+                        <li>Login</li>
+                        <li>ToDo list</li>
+                        <li>BackTop</li>
+                    </ul>
+                </div>
+                <Clock></Clock>
                 <HomeLeft>
-                    <img className='banner-img' alt='Taipei 101' src='https://www.bakermckenzie.com/-/media/images/locations/taiwan_header_new.jpg'/>
+                    <img className='banner-img' alt='Taipei 101' src='/statics/taiwan/buildings-3973014_1280.jpg'/><br/>
                     <a href='https://github.com/shao-you/' target="_blank" rel="noreferrer noopener">Click<GithubItem/></a>
                     <a href='https://www.facebook.com/shaoyou.wu/' target="_blank" rel="noreferrer noopener">Click<FBItem/></a>
                     <a href='https://www.linkedin.com/in/shaoyou/' target="_blank" rel="noreferrer noopener">Click<LinkedInItem/></a>
@@ -27,7 +59,7 @@ class Home extends Component {
                     <List></List>
                 </HomeLeft>
                 <HomeRight>
-                    <Clock></Clock>
+                    
                 </HomeRight>
                 {
                     this.props.showCroll ? <BackTop onClick={this.handleScrollTop}>Top</BackTop> : null
