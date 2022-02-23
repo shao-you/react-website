@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { Component, PureComponent, useState, useEffect } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { connect } from 'react-redux'
 import { ImSpinner9 } from 'react-icons/im'

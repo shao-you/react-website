@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import {
     ClockNum,
     ClockItem,
     ClockHand
 } from './style'
 
-class Clock extends Component {
+class Clock extends PureComponent {
     constructor(props) {
         super(props)
         this.state = {

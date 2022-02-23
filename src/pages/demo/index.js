@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import TodoList from './TodoList'
 import { connect } from 'react-redux'
 import { actionCreators } from './store'

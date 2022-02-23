@@ -1,9 +1,12 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import {
+    BlogWrapper
+} from './style'
 
-class Blog extends Component {
+class Blog extends PureComponent {
     render() {
         return (
-            <div><br/>Under Construction...</div>
+            <BlogWrapper>Under Construction...</BlogWrapper>
         )
     }
 }

@@ -2,8 +2,10 @@ import styled from 'styled-components'
 import { NavLink as Link } from 'react-router-dom'
 
 export const HeadeWrapper = styled.div`
-    position: relative;
-    margin: 0;
+    // position: relative;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
     background: #4D4D4D;
     height: 46px;
     z-index: 999;

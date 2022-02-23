@@ -4,7 +4,7 @@ import * as constants from './constants'
 // define property
 const defaultState = fromJS({
     inputValue: '',
-    list: []
+    list: ['aa', 'bb', 'cc']
 })
 
 // reducer is a "function"

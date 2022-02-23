@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { Navigate } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { LoginWrapper, LoginBox, Input, Button } from './style'

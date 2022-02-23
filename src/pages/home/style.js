@@ -3,43 +3,12 @@ import { Github } from '@styled-icons/boxicons-logos'
 import { FacebookCircle } from '@styled-icons/boxicons-logos'
 import { LinkedinSquare } from '@styled-icons/boxicons-logos'
 
-export const GithubItem = styled(Github)`
-    color: #4D4D4D;
-    //opacity: 0.65;
-    margin-top: 5px;
-    cursor: pointer;
-    width: 46px;    
-    height: 46px;
-    :hover {
-        color: RoyalBlue;
-    }
-`
-export const FBItem = styled(FacebookCircle)`
-    color: #4D4D4D;
-    //opacity: 0.65;
-    margin-top: 5px;
-    cursor: pointer;
-    width: 46px;    
-    height: 46px;
-    :hover {
-        color: RoyalBlue;
-    }
-`
-export const LinkedInItem = styled(LinkedinSquare)`
-    color: #4D4D4D;
-    //opacity: 0.65;
-    margin-top: 5px;
-    cursor: pointer;
-    width: 46px;    
-    height: 46px;
-    :hover {
-        color: RoyalBlue;
-    }
-`
 export const HomeWrapper = styled.div`
     // overflow: hidden;
-    width: 100%;
-    margin: 5px auto;
+    margin: 50px 0 10px; /* Add a top margin to avoid content overlay */
+    font-family: Garamond, Georgia, Arial, sans-serif;
+    line-height: 1.2;
+    // width: 100vw;
     .banner-img {
         width: 98%;
         display: block;
@@ -49,7 +18,7 @@ export const HomeWrapper = styled.div`
 export const HomeLeft = styled.div`
     float: left;
     margin: 10px 5px 10px 10px;
-    width: 60vw;
+    width: 61vw;
 `
 export const HomeRight = styled.div`
     float: right;
@@ -96,4 +65,37 @@ export const BackTop = styled.div`
     font-size: 16px;
     cursor: pointer;
     background: #f7f7f7;
+`
+export const GithubItem = styled(Github)`
+    color: #4D4D4D;
+    //opacity: 0.65;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+    :hover {
+        color: RoyalBlue;
+    }
+`
+export const FBItem = styled(FacebookCircle)`
+    color: #4D4D4D;
+    //opacity: 0.65;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+    :hover {
+        color: RoyalBlue;
+    }
+`
+export const LinkedInItem = styled(LinkedinSquare)`
+    color: #4D4D4D;
+    //opacity: 0.65;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 46px;    
+    height: 46px;
+    :hover {
+        color: RoyalBlue;
+    }
 `

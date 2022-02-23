@@ -33,15 +33,16 @@ class Home extends PureComponent {
                         </Paragraph>
                         <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
                             <Paragraph>
-                                <Title level={3}>Skill</Title>
+                                <Title level={4}>Skill</Title>
                                 <ul>
                                     <li>Redux</li>
                                     <li>Redux-thunk</li>
-                                    <li>React Router</li>
+                                    <li>React Router<br/>
+                                        (page refreshable & direct url access)</li>
                                     <li>Hook</li>
                                     <li>Loadable Components</li>
                                     <li>styled-components</li>
-                                    <li>pureComponent</li>
+                                    <li>PureComponent</li>
                                     <li>redux-immutable</li>
                                     <li>react-transition-group</li>
                                     <li>propTypes & defaultProps</li>
@@ -52,13 +53,11 @@ class Home extends PureComponent {
                                     <li>Ant Design (Antd)</li>
                                     <li>react-icons</li>
                                 </ul>
-                            </Paragraph>
-                            <Paragraph>
-                                <Title level={3}>Function</Title>
+                                <Title level={4}>Function</Title>
                                 <ul>
                                     <li>Analog clock</li>
                                     <li>Search bar & Trending list</li>
-                                    <li>Responsicve navi bar</li>
+                                    <li>Responsive navi bar</li>
                                     <li>Login/Logout</li>
                                     <li>ToDo list</li>
                                     <li>BackTop</li>

@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 export const LoginWrapper = styled.div`
-    overflow: hidden;
-    background: #eee;
+    margin: 0 auto;
+    padding-top: 50px;
+    font-family: Garamond,Georgia,Arial,sans-serif;
+    width: 90vw;
 `
 export const LoginBox = styled.div`
-    width: 90vw;
     max-width: 400px;
     height: 180px;
     margin: 100px auto;

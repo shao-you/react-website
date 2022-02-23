@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import {
+    DemoWrapper
+} from './style'
 // import 'antd/dist/antd.css'
 import 'antd/dist/antd.min.css'
 import { connect } from 'react-redux'
@@ -7,7 +10,7 @@ import { Input, Button, List } from 'antd'
 import PropTypes from 'prop-types'
 import store from '../../store'
 
-class TodoList extends Component {
+class TodoList extends PureComponent {
     // state = store.getState()
     // shouldComponentUpdate(nextProps, nextState) {
     //     // console.log(nextState.get('demo').get('inputValue'))
@@ -25,7 +28,7 @@ class TodoList extends Component {
         // console.log(this.props)
         const { inputValue, list, handleInputChange, handleBtnClick, handleItemDelete } = this.props
         return (
-            <div style={{margin: '7px', float: 'left'}}>
+            <DemoWrapper>
                 <div>
                     <Input 
                         value={inputValue} 
@@ -50,11 +53,11 @@ class TodoList extends Component {
                         </List.Item>
                     )}
                 />
-            </div>
+            </DemoWrapper>
         )
     }
     componentDidMount() {
-        this.props.handleStoreChange(this.props.urlPara)
+        // this.props.handleStoreChange(this.props.urlPara)
     }
 }
 

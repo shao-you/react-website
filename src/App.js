@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { Provider } from 'react-redux'
 import Header from './common/header'
 import store from './store'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/about/loadable'
 import Demo from './pages/demo/loadable'
@@ -10,7 +10,7 @@ import Blog from './pages/blog/loadable'
 import Taiwan from './pages/taiwan/loadable'
 import Login from './pages/login/loadable'
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <Provider store={store}>

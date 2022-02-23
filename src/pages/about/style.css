@@ -11,7 +11,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 	display:block;
 }
 
-/* html, body {background: #181818; font-family: 'Lato', helvetica, arial, sans-serif; font-size: 16px; color: #222;} */
+/* html, body {background: #181818; font-family: 'Lato', Georgia, arial, sans-serif; font-size: 16px; color: #222;} */
 
 .clear {clear: both;}
 
@@ -22,10 +22,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 	color: #444;
 } */
 CVWrapper {
+	margin: 55px auto 10px; /* Add a top margin to avoid content overlay */
+	font-family: Garamond, Georgia, Arial, sans-serif;
+	/* width: 95vw; */
 	display: block;
-	margin-left: auto;
-    margin-right: auto;
-	/* margin: 10px; */
 	padding: 10px;
 	background: #eee;
 }
@@ -49,7 +49,7 @@ CVWrapper {
     margin-right: auto;
 	/* max-width: 1000px; */
 	background: #eee;
-	font-family: Garamond, Helvetica, Arial, sans-serif;
+	font-family: Garamond, Georgia, Arial, sans-serif;
 	line-height: 1.2;
 }
 div ul {
@@ -73,13 +73,13 @@ div ol{
 #name h1 {
 	font-size: 2em;
 	font-weight: 600;
-	font-family: Garamond, Helvetica, Arial, sans-serif;
+	font-family: Garamond, Georgia, Arial, sans-serif;
 	margin: 0px;
 }
 
 #name h2 {
 	font-size: 1.7em;
-	font-family: Garamond, Helvetica, Arial, sans-serif;
+	font-family: Garamond, Georgia, Arial, sans-serif;
 }
 
 #mainArea {
@@ -162,7 +162,7 @@ section:last-child {
 }
 
 .sectionTitle h1 {
-	font-family: Garamond, Helvetica, Arial, sans-serif;
+	font-family: Garamond, Georgia, Arial, sans-serif;
 	/* font-style: italic; */
 	font-weight: bold;
 	font-size: 1.5em;
@@ -170,7 +170,7 @@ section:last-child {
 }
 
 .sectionContent h2 {
-	font-family: Garamond, Helvetica, Arial, sans-serif;
+	font-family: Garamond, Georgia, Arial, sans-serif;
 	font-size: 1.5em;
 	font-weight: bold;
 	/* margin-bottom: -2px; */
