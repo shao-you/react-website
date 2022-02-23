@@ -11,16 +11,18 @@ export const ClockItem = styled.div`
     // margin-top: 10px;
     width: 30vw;
     height: 30vw;
+    max-width: 230px;
+    max-height: 230px;
     border-radius: 50%;
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
-    font-size: 2.5vw;
+    font-size: min(2vw, 16px);
     color: #444;
     text-align: center;
     ::after {
         background: #aaa;
         content: "";
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1vw;
+        height: 1vw;
         border-radius: 50%;
         position: absolute;
         z-index: 2;
@@ -80,8 +82,8 @@ export const ClockNum = styled.span`
         top: 67%;
     }
     &.five {
-        right: 27%;
-        top: 84%;
+        right: 26%;
+        top: 82%;
     }
     &.six {
         bottom: 2%;

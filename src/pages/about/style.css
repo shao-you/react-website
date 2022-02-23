@@ -27,7 +27,7 @@ CVWrapper {
     margin-right: auto;
 	/* margin: 10px; */
 	padding: 10px;
-	background: #ededed;
+	background: #eee;
 }
 .btn {
 	background-color: #4D4D4D;
@@ -48,7 +48,7 @@ CVWrapper {
 	margin-left: auto;
     margin-right: auto;
 	/* max-width: 1000px; */
-	background: #ededed;
+	background: #eee;
 	font-family: Garamond, Helvetica, Arial, sans-serif;
 	line-height: 1.2;
 }
@@ -67,24 +67,23 @@ div ol{
 .mainDetails {
 	padding: 10px;
 	border-bottom: 2px solid #666;
-	background: #ededed;
+	background: #eee;
 }
 
 #name h1 {
-	font-size: 2.5em;
-	font-weight: 700;
+	font-size: 2em;
+	font-weight: 600;
 	font-family: Garamond, Helvetica, Arial, sans-serif;
 	margin: 0px;
 }
 
 #name h2 {
-	font-size: 2em;
+	font-size: 1.7em;
 	font-family: Garamond, Helvetica, Arial, sans-serif;
-	margin: 0px;
 }
 
 #mainArea {
-	padding: 0 40px;
+	padding: 0 30px 0 10px;
 }
 
 #headshot {
@@ -100,8 +99,9 @@ div ol{
 }
 
 #name {
-	float: left;
-	margin: 20px;
+	/* float: right; */
+	text-align: center;
+	margin: 15px;
 }
 
 #contactDetails {
@@ -163,7 +163,8 @@ section:last-child {
 
 .sectionTitle h1 {
 	font-family: Garamond, Helvetica, Arial, sans-serif;
-	font-style: italic;
+	/* font-style: italic; */
+	font-weight: bold;
 	font-size: 1.5em;
 	color: #666;
 }
@@ -171,11 +172,12 @@ section:last-child {
 .sectionContent h2 {
 	font-family: Garamond, Helvetica, Arial, sans-serif;
 	font-size: 1.5em;
-	margin-bottom: -2px;
+	font-weight: bold;
+	/* margin-bottom: -2px; */
 }
 
 .subDetails {
-	font-size: 1.1em;
+	font-size: 1em;
 	font-style: italic;
 	margin-bottom: 10px;
 }
@@ -261,8 +263,15 @@ section:last-child {
 	}
 	
 	#name h1 {
-		line-height: .8em;
-		margin-bottom: 4px;
+		font-size: 1.7em;
+		line-height: 1.1em;
+		margin-right: 5px;
+	}
+
+	#name h2 {
+		font-size: 1.4em;
+		line-height: .6em;
+		margin: 5px;
 	}
 }
 

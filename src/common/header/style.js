@@ -18,7 +18,7 @@ export const Logo = styled.a.attrs({
     display: block;
     width: 46px;    
     height: 46px;
-    background: url(${process.env.PUBLIC_URL + '/statics/taiwan.jpg'});
+    background: url(${process.env.PUBLIC_URL + '/statics/taiwan.png'});
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -52,7 +52,7 @@ export const NavItem = styled.div`
     }
     &.active {
         display: none;
-        background: #000000;
+        // background: #000000;
         @media screen and (max-width: 650px) {
             display: block;
             &.barClick {

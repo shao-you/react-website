@@ -43,6 +43,7 @@ class TodoList extends Component {
                         <List.Item extra={<Button 
                                             type="primary" 
                                             danger size={'small'} 
+                                            style={{marginLeft: 'auto'}}
                                             onClick={() => {handleItemDelete(index)}}>Del{/* onClick registered an "arrow function" */}
                                          </Button>}>
                             {item}

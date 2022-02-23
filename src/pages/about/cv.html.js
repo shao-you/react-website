@@ -19,7 +19,7 @@ module.exports = `<!DOCTYPE html>
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
-			<img src="/statics/headshot.jpg" alt="Brian Wu" />
+			<img src="./statics/headshot.jpg" alt="Brian Wu" />
 		</div>
 		
 		<div id="name">
@@ -28,13 +28,13 @@ module.exports = `<!DOCTYPE html>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
-		<a href="/statics/cv/CV_Brian_Wu.pdf" target="_blank" rel="noreferrer noopener">
+		<a href="./statics/cv/CV_Brian_Wu.pdf" target="_blank" rel="noreferrer noopener">
 		<button class="btn"><i class="fa fa-download"></i> Download CV</button></a>
 
 			<ul>
 				
 				<li><i class="fa fa-envelope" style="font-size:10px;margin:1px;"></i><a href="mailto:brian.sy.wu@gmail.com" target="_blank"> brian.sy.wu@gmail.com</a></li>
-				<li><i class="fa fa-home" style="font-size:15px;margin:1px;"></i><a href="http://shaoyouwu.com"> shaoyouwu.com</a></li>
+				<li><i class="fa fa-home" style="font-size:15px;margin:1px;"></i><a href="http://brianwu.tw"> brianwu.tw</a></li>
 				<li><i class="fa fa-mobile" style="font-size:17px;margin:1px;"></i> +44-07516549952</li>
 				<li><i class="fa fa-map-marker" style="font-size:15px;margin:1px;"></i> Manchester, United Kingdom<li>
 			</ul>
@@ -67,7 +67,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 
 			<div class="clear"></div>
-			<img src="/statics/PRIMARY-MASTER-LOGO_EN_CMYK_ORANGE.png" alt="Mediatek" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/PRIMARY-MASTER-LOGO_EN_CMYK_ORANGE.png" alt="Mediatek" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">4G/5G Software Engineer</h2>
@@ -87,7 +87,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 			
 			<div class="clear"></div>
-			<img src="/statics/NHRI_Logo.gif" alt="nhri" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/NHRI_Logo.gif" alt="nhri" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">Research Assistant (During study time)</h2>
@@ -99,7 +99,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 
 			<div class="clear"></div>
-			<img src="/statics/Academia_Sinica.png" alt="academia sinica" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/Academia_Sinica.png" alt="academia sinica" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">Research Assistant (During study time)</h2>
@@ -136,7 +136,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 			
 			<div class="clear"></div>
-			<img src="/statics/NCTU_emblem.svg.png" alt="nctu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/NCTU_emblem.svg.png" alt="nctu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">M.Sc. in Network Engineering</h2>
@@ -155,7 +155,7 @@ module.exports = `<!DOCTYPE html>
 			</div>	
 
 			<div class="clear"></div>
-			<img src="/statics/1200px-Tsinghua_University_Logo.svg.png" alt="thu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/1200px-Tsinghua_University_Logo.svg.png" alt="thu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
 			<div class="sectionContent">
 				<article>
 					<h2>Exchange Student in Computer Science and Technology</h2>
@@ -164,7 +164,7 @@ module.exports = `<!DOCTYPE html>
 			</div>	
 
 			<div class="clear"></div>
-			<img src="/statics/NCTU_emblem.svg.png" alt="nctu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/NCTU_emblem.svg.png" alt="nctu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
 			<div class="sectionContent">
 				<article>
 					<h2>B.Sc. in Computer Science</h2>

@@ -24,9 +24,18 @@ class Clock extends Component {
         clearInterval(this.timerId);
     }
     handleDeg = () => {
-        this.sDeg = this.state.time.getSeconds() * 6
-        this.mDeg = (this.state.time.getMinutes() + this.sDeg/360) * 6
-        this.hDeg = (this.state.time.getHours() + this.mDeg/360) * 30
+        // v1
+        // this.sDeg = this.state.time.getSeconds() * 6
+        // this.mDeg = (this.state.time.getMinutes() + this.sDeg/360) * 6
+        // this.hDeg = (this.state.time.getHours() + this.mDeg/360) * 30
+
+        // v2
+        let _s = this.state.time.getSeconds()
+        let _m = this.state.time.getMinutes()
+        let _h = this.state.time.getHours()
+        this.sDeg = _s * 6
+        this.mDeg = _m * 6 + _s/10
+        this.hDeg = _h * 30 + _m/2
     }
     render() {
         return (

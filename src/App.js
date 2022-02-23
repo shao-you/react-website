@@ -4,17 +4,17 @@ import Header from './common/header'
 import store from './store'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/home'
-import About from './pages/about'
-import Demo from './pages/demo'
-import Blog from './pages/blog'
-import Taiwan from './pages/taiwan'
-import Login from './pages/login'
+import About from './pages/about/loadable'
+import Demo from './pages/demo/loadable'
+import Blog from './pages/blog/loadable'
+import Taiwan from './pages/taiwan/loadable'
+import Login from './pages/login/loadable'
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header/>  
             <Routes>
               <Route exact path='/' element = {<Home/>}></Route>

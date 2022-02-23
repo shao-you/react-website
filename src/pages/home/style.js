@@ -11,7 +11,7 @@ export const GithubItem = styled(Github)`
     width: 46px;    
     height: 46px;
     :hover {
-        color: blue;
+        color: RoyalBlue;
     }
 `
 export const FBItem = styled(FacebookCircle)`
@@ -22,7 +22,7 @@ export const FBItem = styled(FacebookCircle)`
     width: 46px;    
     height: 46px;
     :hover {
-        color: blue;
+        color: RoyalBlue;
     }
 `
 export const LinkedInItem = styled(LinkedinSquare)`
@@ -33,16 +33,15 @@ export const LinkedInItem = styled(LinkedinSquare)`
     width: 46px;    
     height: 46px;
     :hover {
-        color: blue;
+        color: RoyalBlue;
     }
 `
 export const HomeWrapper = styled.div`
     // overflow: hidden;
     width: 100%;
     margin: 5px auto;
-    background: #f7f7f7;
     .banner-img {
-        width: 97%;
+        width: 98%;
         display: block;
         margin: 5px auto;
     }
@@ -65,7 +64,6 @@ export const TopicWrapper = styled.div`
     overflow: hidden;
     padding: 20px 0 10px 0;
     margin-left: -18px;
-    // border-bottom: 1px solid #dcdcdc;
 `
 export const TopicItem = styled.div`
     float: left;

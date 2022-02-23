@@ -20,7 +20,7 @@ export const changeHotList = (data) => ({
 export const getHotList = () => {
     return (dispatch) => {
         // axios.get('http://localhost:3020/react/').then((res) => {
-        axios.get('/api/test.json').then((res) => {
+        axios.get('./api/test.json').then((res) => {
             // console.log(res)
             const data = res.data
             const action = changeHotList(data.data)
