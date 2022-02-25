@@ -29,15 +29,16 @@ module.exports = `<!DOCTYPE html>
 		</div>
 		
 		<div id="contactDetails" class="quickFade delayFour">
-		<a href="./statics/cv/CV_Brian_Wu.pdf" target="_blank" rel="noreferrer noopener">
-		<button class="btn"><i class="fa fa-download"></i> Download CV</button></a>
-
-			<ul>
-				
-				<li><i class="fa fa-envelope" style="font-size:10px;margin:1px;"></i><a href="mailto:brian.sy.wu@gmail.com" target="_blank"> brian.sy.wu@gmail.com</a></li>
-				<li><i class="fa fa-home" style="font-size:15px;margin:1px;"></i><a href="http://brianwu.tw"> brianwu.tw</a></li>
-				<li><i class="fa fa-mobile" style="font-size:17px;margin:1px;"></i> +44-07516549952</li>
-				<li><i class="fa fa-map-marker" style="font-size:15px;margin:1px;"></i> Manchester, United Kingdom<li>
+			<ul style="float: none;padding: 0;">
+				<li><a href="./statics/cv/CV_Brian_Wu.pdf" target="_blank" rel="noreferrer noopener">
+					<button class="btn"><i class="fa fa-download"></i>
+					Download CV</button></a></li>
+				<li><i class="fa fa-envelope"></i>
+					<a href="mailto:brian.sy.wu@gmail.com" target="_blank"> brian.sy.wu@gmail.com</a></li>
+				<li><i class="fa fa-home"></i>
+					<a href="http://brianwu.tw"> brianwu.tw</a></li>
+				<li><i class="fa fa-mobile"></i> +44-07516549952</li>
+				<li><i class="fa fa-map-marker"></i> Manchester, United Kingdom</li>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -67,7 +68,7 @@ module.exports = `<!DOCTYPE html>
 			<img src="./statics/PRIMARY-MASTER-LOGO_EN_CMYK_ORANGE.png" alt="Mediatek"/>
 			<div class="sectionContent">
 				<article>
-					<h2 style="margin:0;">4G/5G Software Engineer</h2>
+					<h2>4G/5G Software Engineer</h2>
 					<p class="subDetails">MediaTek Inc. (Wireless Communication Technology Department) - Hsinchu, Taiwan | 12/2015 - 10/2021</p>
 
 					<ul>
@@ -87,7 +88,7 @@ module.exports = `<!DOCTYPE html>
 			<img src="./statics/NHRI_Logo.gif" alt="nhri"/>
 			<div class="sectionContent">
 				<article>
-					<h2 style="margin:0;">Research Assistant (During study time)</h2>
+					<h2>Research Assistant (During study time)</h2>
 					<p class="subDetails">National Health Research Institutes - Miaoli, Taiwan | 08/2013 - 12/2014</p>
 					<ul>
 						<li>Implemented a parallel program to process and transform huge genetic raw data on supercomputers for further analysis.</ul>
@@ -99,7 +100,7 @@ module.exports = `<!DOCTYPE html>
 			<img src="./statics/Academia_Sinica.png" alt="academia sinica"/>
 			<div class="sectionContent">
 				<article>
-					<h2 style="margin:0;">Research Assistant (During study time)</h2>
+					<h2>Research Assistant (During study time)</h2>
 					<p class="subDetails">Academia Sinica - Taipei, Taiwan | 08/2012 - 12/2014</p>
 					<ul>
 						<li>Studied Wireless Sensor Network (WSN) and developed some innovative approaches conducted in the heuristic algorithm to solve sensor clustering and routing problems in WSN.</li>
@@ -137,7 +138,7 @@ module.exports = `<!DOCTYPE html>
 			<img src="./statics/NCTU_emblem.svg.png" alt="nctu"/>
 			<div class="sectionContent">
 				<article>
-					<h2 style="margin:0;">M.Sc. in Network Engineering</h2>
+					<h2>M.Sc. in Network Engineering</h2>
 					<p class="subDetails">National Chiao Tung University - Hsinchu, Taiwan | 09/2013 - 09/2015</p>
 					<ul>
 						<li>GPA: 4.17/4.3</li>

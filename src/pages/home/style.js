@@ -16,6 +16,24 @@ export const HomeWrapper = styled.div`
         margin: 5px auto;
     }
 `
+export const HomeIntro = styled.div`
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    margin: 15px 0 0 10px;
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px auto;
+    }
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+        ul {
+            list-style: circle;
+        }
+    }
+`
 export const HomeLeft = styled.div`
     float: left;
     margin: 10px 5px 10px 10px;
