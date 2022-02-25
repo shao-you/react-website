@@ -26,7 +26,7 @@ class Home extends PureComponent {
                 <HomeLeft>
                     <Typography>
                         {/* <Title>Introduction</Title> */}
-                        <Paragraph style={{textAlign: 'justify'}}>
+                        <Paragraph style={{textAlign: 'center', fontSize: '17px'}}>
                             I started learning React from 22/01/2022, and I was almost ZERO about website development.
                             I built this website to record my learning journey of React/HTML/CSS/JavaScript.
                             I tried to adopt important skills and libraries to achieve that.
@@ -37,8 +37,10 @@ class Home extends PureComponent {
                                 <ul>
                                     <li>Redux</li>
                                     <li>Redux-thunk</li>
-                                    <li>React Router<br/>
-                                        (page refreshable & direct url access)</li>
+                                    <li>React Router
+                                        <li>page refreshable</li>
+                                        <li>direct url access</li>
+                                    </li>
                                     <li>Hook</li>
                                     <li>Loadable Components</li>
                                     <li>styled-components</li>
@@ -100,7 +102,7 @@ const mapState = (state) => ({
 const mapDispatch = (dispatch) => ({
     changeScollTopShow() {
         // console.log(document.documentElement.scrollTop)
-        if (document.documentElement.scrollTop > 20) {
+        if (document.documentElement.scrollTop > 250) {
             dispatch(actionCreators.toggleTopShow(true))
         } else {
             dispatch(actionCreators.toggleTopShow(false))

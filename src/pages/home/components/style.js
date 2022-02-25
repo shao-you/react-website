@@ -38,16 +38,16 @@ export const ClockHand = styled.div`
     transform-origin: bottom;
     &.hour_hand {
         width: 1.8%;
-        height: 24%;
-        top: 26%;
-        left: 48.85%;
+        height: 22%;
+        top: 27%;
+        left: 49.85%;
         opacity: 0.8;
         background: black;
     }
     &.min_hand {
         width: 1.6%;
-        height: 30%;
-        top: 19%;
+        height: 32%;
+        top: 18%;
         left: 49.5%;
         opacity: 0.8;
         background: black;
@@ -86,7 +86,7 @@ export const ClockNum = styled.span`
         top: 82%;
     }
     &.six {
-        bottom: 2%;
+        bottom: 3%;
         left: 48%;
     }
     &.seven {

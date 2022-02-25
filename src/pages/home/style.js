@@ -5,10 +5,11 @@ import { LinkedinSquare } from '@styled-icons/boxicons-logos'
 
 export const HomeWrapper = styled.div`
     // overflow: hidden;
-    margin: 50px 0 10px; /* Add a top margin to avoid content overlay */
+    margin: 0 0 10px 0;
+    padding-top: 50px;
     font-family: Garamond, Georgia, Arial, sans-serif;
     line-height: 1.2;
-    // width: 100vw;
+    width: 100%;
     .banner-img {
         width: 98%;
         display: block;
@@ -18,12 +19,12 @@ export const HomeWrapper = styled.div`
 export const HomeLeft = styled.div`
     float: left;
     margin: 10px 5px 10px 10px;
-    width: 61vw;
+    width: 60%;
 `
 export const HomeRight = styled.div`
     float: right;
     margin: 10px 10px 10px 5px;
-    width: 30vw;
+    // width: 35%;
 `
 export const HomeCenter = styled.div`
     float: none;

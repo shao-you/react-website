@@ -20,7 +20,7 @@ module.exports = `<!DOCTYPE html>
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
-			<img src="./statics/headshot.jpg" alt="Brian Wu" />
+			<img src="./statics/headshot.png" alt="Brian Wu" />
 		</div>
 		
 		<div id="name">
@@ -51,11 +51,7 @@ module.exports = `<!DOCTYPE html>
 				</div>
 				
 				<div class="sectionContent">
-					<p style="text-align: justify;">Experienced software engineer, especially in 4G/5G, had experience in system design, implementation, optimisation, academic research, paper publication and mentoring. 
-						Familiar with the architecture of Software-Defined Network, Radio Access Network, and Wireless Sensor Network. 
-						Originally from Taiwan and living in Manchester, granted a dependent-partner visa eligible to work full-time and will not require sponsorship until 30/4/2026. 
-						A quick learner with learning passion and willingness, and constantly (learning: React, JavaScript, Machine Learning). 
-						Satisfied with delivering high-quality work output through innovative approaches and teamwork, looking forward to contributing the strengths.</p>
+					<p style="text-align: justify;">Experienced software engineer, especially in 4G/5G, had experience in system design, implementation, optimisation, academic research, paper publication and mentoring. Familiar with SDN, RAN, WSN and some popular programming languages. Self-taught web development by React/CSS/HTML/JavaScript and built a website with important schemes. Originally from Taiwan and living in Manchester, granted a dependent-partner visa eligible to work full-time and will not require sponsorship until 30/4/2026. A quick learner with learning passion and willingness. Looking forward to contributing the strengths to deliver high-quality work output through innovative approaches and teamwork.</p>
 				</div>
 			</article>
 			<div class="clear"></div>
@@ -68,7 +64,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 
 			<div class="clear"></div>
-			<img src="./statics/PRIMARY-MASTER-LOGO_EN_CMYK_ORANGE.png" alt="Mediatek" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/PRIMARY-MASTER-LOGO_EN_CMYK_ORANGE.png" alt="Mediatek"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">4G/5G Software Engineer</h2>
@@ -88,7 +84,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 			
 			<div class="clear"></div>
-			<img src="./statics/NHRI_Logo.gif" alt="nhri" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/NHRI_Logo.gif" alt="nhri"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">Research Assistant (During study time)</h2>
@@ -100,7 +96,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 
 			<div class="clear"></div>
-			<img src="./statics/Academia_Sinica.png" alt="academia sinica" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/Academia_Sinica.png" alt="academia sinica"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">Research Assistant (During study time)</h2>
@@ -123,6 +119,7 @@ module.exports = `<!DOCTYPE html>
 			<div class="sectionContent">
 				<ul>
 					<li>C/C++, Python, Java, Verilog</li>
+					<li>React, CSS/HTML/JavaScript </li>
 					<li>Git, CI/CD, Splunk, Heuristic Algorithms, Embedded System</li>
 					<li>4G/5G, TCP/IP, Radio Access Network (RAN), Software-Defined Network (SDN), Wireless Sensor Network (WSN)</li>
 				</ul>
@@ -137,7 +134,7 @@ module.exports = `<!DOCTYPE html>
 			</div>
 			
 			<div class="clear"></div>
-			<img src="./statics/NCTU_emblem.svg.png" alt="nctu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/NCTU_emblem.svg.png" alt="nctu"/>
 			<div class="sectionContent">
 				<article>
 					<h2 style="margin:0;">M.Sc. in Network Engineering</h2>
@@ -156,7 +153,7 @@ module.exports = `<!DOCTYPE html>
 			</div>	
 
 			<div class="clear"></div>
-			<img src="./statics/1200px-Tsinghua_University_Logo.svg.png" alt="thu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/1200px-Tsinghua_University_Logo.svg.png" alt="thu"/>
 			<div class="sectionContent">
 				<article>
 					<h2>Exchange Student in Computer Science and Technology</h2>
@@ -165,12 +162,12 @@ module.exports = `<!DOCTYPE html>
 			</div>	
 
 			<div class="clear"></div>
-			<img src="./statics/NCTU_emblem.svg.png" alt="nctu" style="width: 11%;float:left;margin: 2% 0 0 10%;"/>
+			<img src="./statics/NCTU_emblem.svg.png" alt="nctu"/>
 			<div class="sectionContent">
 				<article>
 					<h2>B.Sc. in Computer Science</h2>
 					<p class="subDetails">National Chiao Tung University - Hsinchu, Taiwan | 09/2009 - 06/2013</p>
-					<h1>* National Chiao Tung University (NCTU) and National Yang-Ming University (NYMU) merged into National Yang Ming Chiao Tung University (NYCU) on Feb. 1, 2021.</h1>
+					<p style="font-size:9px;display: flex;">* National Chiao Tung University (NCTU) and National Yang-Ming University (NYMU) merged into National Yang Ming Chiao Tung University (NYCU) on Feb. 1, 2021.</p>
 				</article>
 			</div>
 			<div class="clear"></div>

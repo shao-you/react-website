@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const TaiwanWrapper = styled.div`
-    margin: 55px auto 10px; /* Add a top margin to avoid content overlay */
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 10px;
     font-family: Garamond, Georgia, Arial, sans-serif;
     width: 90vw;
     display: flex;
