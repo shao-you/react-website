@@ -23,6 +23,9 @@ class Home extends PureComponent {
             <HomeWrapper>
                 <HomeLeft>
                     <p style={{textAlign: 'center', fontSize: '17px'}}>
+                        As an experienced software engineer specialising in 4G/5G for the past 6 years, I recently moved to the UK to accompany my wife's study in Manchester.
+                        While exploring the exotic culture, I also expect myself to learn a new skill with ambition.
+                        <br/><br/>
                         I started learning React (self-taught) from 22/01/2022, and I was almost ZERO about website development.
                         I built this website to record my learning journey of React/HTML/CSS/JavaScript.
                         I tried to adopt important skills and libraries to achieve that.
