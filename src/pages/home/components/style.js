@@ -37,10 +37,10 @@ export const ClockHand = styled.div`
     border-radius: 10px;
     transform-origin: bottom;
     &.hour_hand {
-        width: 1.8%;
-        height: 22%;
-        top: 27%;
-        left: 49.85%;
+        width: 1.6%;
+        height: 20%;
+        top: 30%;
+        left: 48.85%;
         opacity: 0.8;
         background: black;
     }

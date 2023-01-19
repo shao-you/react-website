@@ -52,7 +52,11 @@ module.exports = `<!DOCTYPE html>
 				</div>
 				
 				<div class="sectionContent">
-					<p style="text-align: justify;">Experienced software engineer, especially in 4G/5G, had experience in system design, implementation, optimisation, academic research, paper publication and mentoring. Familiar with SDN, RAN, WSN and some popular programming languages. Self-taught web development by React/CSS/HTML/JavaScript and built a website with important schemes. Originally from Taiwan and living in Manchester, granted a dependent-partner visa eligible to work full-time and will not require sponsorship until 30/4/2026. A quick learner with learning passion and willingness. Looking forward to contributing the strengths to deliver high-quality work output through innovative approaches and teamwork.</p>
+					<p style="text-align: justify;">
+						Experienced software engineer with expertise in C/C++ for about 6 years, had experience in system design, implementation, optimisation, academic research, paper publication, and mentoring. Lead some software optimisations and introduced an innovative system to widely boost software quality. Coordinated with customers/vendors to reach the solutions. Familiar with 4G/5G, SDN, RAN, WSN and computer science methodology. Self-taught web development with the ambition (React/CSS/HTML/JavaScript) and built a website adopting important skills. 
+ 						<br/><br/>
+						Originally from Taiwan and living in Manchester, granted a dependent-partner visa eligible to work full-time and not require sponsorship until 30/4/2026. A quick learner with learning passion and willingness. Looking forward to contributing my strengths and making an impact.
+					</p>
 				</div>
 			</article>
 			<div class="clear"></div>
@@ -73,12 +77,12 @@ module.exports = `<!DOCTYPE html>
 
 					<ul>
 						<li>MediaTek is a global fabless firm, ranked the seventh largest semiconductor supplier and biggest smartphone chipset vendor in the world in 2021.</li>
-						<li>Developed/maintained/optimised 4G/5G Layer-2 protocol software of system-on-a-chip (SoC), grasped 3gpp specifications, and fixed issues.</li>
-						<li>Cooperated with foreign colleagues, jointly debugged with telecom operators and machine vendors, and also handled issues from the customer.</li> 
+						<li>Lead some optimisations and feature designs upon the giant system of our own 4G/5G Layer-2 protocol software (in C language) in smartphones. Had rich practical implementation and debug experience with CI/CD method and a good understanding of 3gpp standard specifications.</li>
+						<li>Cooperated closely with global colleagues, telecom operators, machine vendors, and customers. Often negotiated and coordinated cross teams to solve software issues.</li> 
 						<li>Optimised uplink data scheduling (run in an embedded system) and decreased its hard-real-time (HRT) by 20% via increasing cache efficiency and empowering parallel processing.</li> 
-						<li>Designed and implemented a big-data analysis system, which can extract valuable information (shown on Splunk) from huge field-trial logs, such as network configuration patterns and user behaviour. Optimised some product features effectively with more confidence based on this system.</li> 
+						<li>Designed and implemented a “big-data analysis system” to widely boost the software quality, by extracting valuable information from huge field-trial logs, such as network patterns and user behaviour. Optimised some product features effectively with more confidence based on this system.</li> 
 						<li>Boosted maximum throughput of a single phone, and reached 5G theoretical values on Oct. 2021 for both mmWave and Sub-6 spectrums, which is the world first.</li> 
-						<li>Troubleshot performance issues by simultaneously considering telecom stack (LTE-A/NR) and datacom stack (TCP/IP). </li>
+						<li>Troubleshot performance issues of data rate by a comprehensive consideration of telecom stack (LTE-A/NR) and datacom stack (TCP/IP).</li>
 					</ul>
 
 				</article>
